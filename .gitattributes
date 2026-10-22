@@ -1,0 +1,4 @@
+# Preserve exact source/result bytes for portable SHA-256 provenance.
+* -text
+*.pdf binary
+*.png binary

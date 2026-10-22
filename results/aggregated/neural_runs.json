@@ -1,0 +1,380 @@
+[
+  {
+    "status": "completed",
+    "method": "fixed",
+    "seed": 0,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.5697962001431733,
+    "monitor_evaluation_seconds": 0.1768989998381585,
+    "validation": {
+      "loss": 0.49686912818655976,
+      "accuracy": 0.8295
+    },
+    "test": {
+      "loss": 0.5017897621820642,
+      "accuracy": 0.8243
+    }
+  },
+  {
+    "status": "completed",
+    "method": "cosine",
+    "seed": 0,
+    "learning_rate": 1.0,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.45843680028337985,
+    "monitor_evaluation_seconds": 0.13997659971937537,
+    "validation": {
+      "loss": 0.4756273932930913,
+      "accuracy": 0.838
+    },
+    "test": {
+      "loss": 0.47591673083543284,
+      "accuracy": 0.8326
+    }
+  },
+  {
+    "status": "completed",
+    "method": "pairwise",
+    "seed": 0,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19328,
+    "update_gradient_examples": 19072,
+    "line_search_forward_examples": 50112,
+    "training_seconds": 2.4558459002291784,
+    "monitor_evaluation_seconds": 0.13889839977491647,
+    "validation": {
+      "loss": 0.6410585736577935,
+      "accuracy": 0.759
+    },
+    "test": {
+      "loss": 0.6409624995203025,
+      "accuracy": 0.7631
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint",
+    "seed": 0,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19072,
+    "update_gradient_examples": 19328,
+    "line_search_forward_examples": 63552,
+    "training_seconds": 2.9072314996737987,
+    "monitor_evaluation_seconds": 0.1453390003880486,
+    "validation": {
+      "loss": 0.7684083635175744,
+      "accuracy": 0.7285
+    },
+    "test": {
+      "loss": 0.7767164543971636,
+      "accuracy": 0.7129
+    }
+  },
+  {
+    "status": "completed",
+    "method": "fixed_batch",
+    "seed": 0,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19200,
+    "update_gradient_examples": 19200,
+    "line_search_forward_examples": 60736,
+    "training_seconds": 2.3645576998824254,
+    "monitor_evaluation_seconds": 0.13598990009631962,
+    "validation": {
+      "loss": 0.7781266838341587,
+      "accuracy": 0.735
+    },
+    "test": {
+      "loss": 0.7864947446079639,
+      "accuracy": 0.7246
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint_p32",
+    "seed": 0,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 12704,
+    "update_gradient_examples": 25696,
+    "line_search_forward_examples": 39552,
+    "training_seconds": 3.2253683002199978,
+    "monitor_evaluation_seconds": 0.13657169986981899,
+    "validation": {
+      "loss": 1.6358204492403121,
+      "accuracy": 0.538
+    },
+    "test": {
+      "loss": 1.6319086034946622,
+      "accuracy": 0.5215
+    }
+  },
+  {
+    "status": "completed",
+    "method": "fixed",
+    "seed": 1,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.4261610002722591,
+    "monitor_evaluation_seconds": 0.14870879973750561,
+    "validation": {
+      "loss": 0.49877495436050107,
+      "accuracy": 0.8265
+    },
+    "test": {
+      "loss": 0.5033931177383696,
+      "accuracy": 0.8208
+    }
+  },
+  {
+    "status": "completed",
+    "method": "cosine",
+    "seed": 1,
+    "learning_rate": 1.0,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.37258549977559596,
+    "monitor_evaluation_seconds": 0.13936640019528568,
+    "validation": {
+      "loss": 0.4713397617564911,
+      "accuracy": 0.8385
+    },
+    "test": {
+      "loss": 0.4682001784424533,
+      "accuracy": 0.8332
+    }
+  },
+  {
+    "status": "completed",
+    "method": "pairwise",
+    "seed": 1,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19328,
+    "update_gradient_examples": 19072,
+    "line_search_forward_examples": 57152,
+    "training_seconds": 1.9219043997582048,
+    "monitor_evaluation_seconds": 0.10798060020897537,
+    "validation": {
+      "loss": 0.6777504130731227,
+      "accuracy": 0.7515
+    },
+    "test": {
+      "loss": 0.6797815705837573,
+      "accuracy": 0.7552
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint",
+    "seed": 1,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19072,
+    "update_gradient_examples": 19328,
+    "line_search_forward_examples": 57664,
+    "training_seconds": 1.9893943001516163,
+    "monitor_evaluation_seconds": 0.10019609984010458,
+    "validation": {
+      "loss": 0.7431459090006692,
+      "accuracy": 0.7485
+    },
+    "test": {
+      "loss": 0.7520007737480628,
+      "accuracy": 0.7419
+    }
+  },
+  {
+    "status": "completed",
+    "method": "fixed_batch",
+    "seed": 1,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19200,
+    "update_gradient_examples": 19200,
+    "line_search_forward_examples": 58752,
+    "training_seconds": 1.8698220001533628,
+    "monitor_evaluation_seconds": 0.10029709979426116,
+    "validation": {
+      "loss": 0.7522616181589246,
+      "accuracy": 0.7405
+    },
+    "test": {
+      "loss": 0.7605476266013824,
+      "accuracy": 0.7421
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint_p32",
+    "seed": 1,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 12704,
+    "update_gradient_examples": 25696,
+    "line_search_forward_examples": 37696,
+    "training_seconds": 2.4745155001292005,
+    "monitor_evaluation_seconds": 0.10271569981705397,
+    "validation": {
+      "loss": 0.6806520494856056,
+      "accuracy": 0.768
+    },
+    "test": {
+      "loss": 0.691114489637607,
+      "accuracy": 0.7676
+    }
+  },
+  {
+    "status": "completed",
+    "method": "fixed",
+    "seed": 2,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.2856243997812271,
+    "monitor_evaluation_seconds": 0.10991470015142113,
+    "validation": {
+      "loss": 0.53209542489088,
+      "accuracy": 0.8015
+    },
+    "test": {
+      "loss": 0.5356432198298987,
+      "accuracy": 0.8061
+    }
+  },
+  {
+    "status": "completed",
+    "method": "cosine",
+    "seed": 2,
+    "learning_rate": 1.0,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 0,
+    "update_gradient_examples": 38400,
+    "line_search_forward_examples": 0,
+    "training_seconds": 0.27639509981963784,
+    "monitor_evaluation_seconds": 0.10099150007590652,
+    "validation": {
+      "loss": 0.471654321470816,
+      "accuracy": 0.8365
+    },
+    "test": {
+      "loss": 0.47085021015853207,
+      "accuracy": 0.8358
+    }
+  },
+  {
+    "status": "completed",
+    "method": "pairwise",
+    "seed": 2,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19328,
+    "update_gradient_examples": 19072,
+    "line_search_forward_examples": 53120,
+    "training_seconds": 1.7500881002051756,
+    "monitor_evaluation_seconds": 0.10095389978960156,
+    "validation": {
+      "loss": 0.6536613202803617,
+      "accuracy": 0.7655
+    },
+    "test": {
+      "loss": 0.6515918784965323,
+      "accuracy": 0.7671
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint",
+    "seed": 2,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19072,
+    "update_gradient_examples": 19328,
+    "line_search_forward_examples": 61056,
+    "training_seconds": 1.8346989997662604,
+    "monitor_evaluation_seconds": 0.10097810020670295,
+    "validation": {
+      "loss": 0.7445051052339234,
+      "accuracy": 0.735
+    },
+    "test": {
+      "loss": 0.7494619620819031,
+      "accuracy": 0.7358
+    }
+  },
+  {
+    "status": "completed",
+    "method": "fixed_batch",
+    "seed": 2,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 19200,
+    "update_gradient_examples": 19200,
+    "line_search_forward_examples": 63296,
+    "training_seconds": 1.79129539988935,
+    "monitor_evaluation_seconds": 0.10667820007074624,
+    "validation": {
+      "loss": 0.7402260085114978,
+      "accuracy": 0.7645
+    },
+    "test": {
+      "loss": 0.7485487888460601,
+      "accuracy": 0.7485
+    }
+  },
+  {
+    "status": "completed",
+    "method": "joint_p32",
+    "seed": 2,
+    "learning_rate": 0.3,
+    "fixed_momentum": 0.9,
+    "gradient_examples": 38400,
+    "pilot_gradient_examples": 12704,
+    "update_gradient_examples": 25696,
+    "line_search_forward_examples": 36576,
+    "training_seconds": 2.5970582999289036,
+    "monitor_evaluation_seconds": 0.10173330013640225,
+    "validation": {
+      "loss": 1.633883922326827,
+      "accuracy": 0.547
+    },
+    "test": {
+      "loss": 1.6517913321788285,
+      "accuracy": 0.5441
+    }
+  }
+]

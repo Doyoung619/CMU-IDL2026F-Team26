@@ -1,0 +1,133 @@
+{
+  "selection": "minimum validation cross entropy; no test evaluation",
+  "trials": [
+    {
+      "method": "fixed",
+      "lr": 0.1,
+      "beta": 0.0,
+      "validation": {
+        "loss": 0.6910774935821543,
+        "accuracy": 0.7535
+      }
+    },
+    {
+      "method": "fixed",
+      "lr": 0.1,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.6673632132753837,
+        "accuracy": 0.7715
+      }
+    },
+    {
+      "method": "fixed",
+      "lr": 0.3,
+      "beta": 0.0,
+      "validation": {
+        "loss": 0.6802002105080596,
+        "accuracy": 0.745
+      }
+    },
+    {
+      "method": "fixed",
+      "lr": 0.3,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.6135517283716518,
+        "accuracy": 0.7885
+      }
+    },
+    {
+      "method": "fixed",
+      "lr": 1.0,
+      "beta": 0.0,
+      "validation": {
+        "loss": 2.0069404941176137,
+        "accuracy": 0.2
+      }
+    },
+    {
+      "method": "fixed",
+      "lr": 1.0,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.619582823343858,
+        "accuracy": 0.7875
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 0.1,
+      "beta": 0.0,
+      "validation": {
+        "loss": 0.7648592871296155,
+        "accuracy": 0.7405
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 0.1,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.7870558302168241,
+        "accuracy": 0.7215
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 0.3,
+      "beta": 0.0,
+      "validation": {
+        "loss": 0.6861798359396193,
+        "accuracy": 0.7565
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 0.3,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.6225453515049937,
+        "accuracy": 0.796
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 1.0,
+      "beta": 0.0,
+      "validation": {
+        "loss": 1.2991984881474052,
+        "accuracy": 0.541
+      }
+    },
+    {
+      "method": "cosine",
+      "lr": 1.0,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.565664073308892,
+        "accuracy": 0.8
+      }
+    }
+  ],
+  "chosen": {
+    "fixed": {
+      "method": "fixed",
+      "lr": 0.3,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.6135517283716518,
+        "accuracy": 0.7885
+      }
+    },
+    "cosine": {
+      "method": "cosine",
+      "lr": 1.0,
+      "beta": 0.9,
+      "validation": {
+        "loss": 0.565664073308892,
+        "accuracy": 0.8
+      }
+    }
+  }
+}
