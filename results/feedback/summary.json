@@ -1,0 +1,460 @@
+{
+  "residual_variants": [
+    {
+      "seed": 0,
+      "variant": "strict_legacy",
+      "has_tail": true,
+      "validation_accuracy": 0.538,
+      "previous_eta": 0.015625,
+      "residual_eta": 0.3,
+      "validation_before": 0.7675,
+      "validation_after": 0.538
+    },
+    {
+      "seed": 0,
+      "variant": "strict_capped",
+      "has_tail": true,
+      "validation_accuracy": 0.7805,
+      "previous_eta": 0.015625,
+      "residual_eta": 0.015625,
+      "validation_before": 0.7675,
+      "validation_after": 0.7805
+    },
+    {
+      "seed": 0,
+      "variant": "tolerant_legacy",
+      "has_tail": true,
+      "validation_accuracy": 0.538,
+      "previous_eta": 0.015625,
+      "residual_eta": 0.3,
+      "validation_before": 0.7675,
+      "validation_after": 0.538
+    },
+    {
+      "seed": 0,
+      "variant": "tolerant_capped",
+      "has_tail": true,
+      "validation_accuracy": 0.7805,
+      "previous_eta": 0.015625,
+      "residual_eta": 0.015625,
+      "validation_before": 0.7675,
+      "validation_after": 0.7805
+    },
+    {
+      "seed": 1,
+      "variant": "strict_legacy",
+      "has_tail": false,
+      "validation_accuracy": 0.768,
+      "previous_eta": null,
+      "residual_eta": null,
+      "validation_before": null,
+      "validation_after": null
+    },
+    {
+      "seed": 1,
+      "variant": "strict_capped",
+      "has_tail": false,
+      "validation_accuracy": 0.768,
+      "previous_eta": null,
+      "residual_eta": null,
+      "validation_before": null,
+      "validation_after": null
+    },
+    {
+      "seed": 1,
+      "variant": "tolerant_legacy",
+      "has_tail": true,
+      "validation_accuracy": 0.312,
+      "previous_eta": 0.0078125,
+      "residual_eta": 0.3,
+      "validation_before": 0.7765,
+      "validation_after": 0.312
+    },
+    {
+      "seed": 1,
+      "variant": "tolerant_capped",
+      "has_tail": true,
+      "validation_accuracy": 0.775,
+      "previous_eta": 0.0078125,
+      "residual_eta": 0.0078125,
+      "validation_before": 0.7765,
+      "validation_after": 0.775
+    },
+    {
+      "seed": 2,
+      "variant": "strict_legacy",
+      "has_tail": true,
+      "validation_accuracy": 0.547,
+      "previous_eta": 0.03125,
+      "residual_eta": 0.3,
+      "validation_before": 0.756,
+      "validation_after": 0.547
+    },
+    {
+      "seed": 2,
+      "variant": "strict_capped",
+      "has_tail": true,
+      "validation_accuracy": 0.7435,
+      "previous_eta": 0.03125,
+      "residual_eta": 0.03125,
+      "validation_before": 0.756,
+      "validation_after": 0.7435
+    },
+    {
+      "seed": 2,
+      "variant": "tolerant_legacy",
+      "has_tail": true,
+      "validation_accuracy": 0.547,
+      "previous_eta": 0.03125,
+      "residual_eta": 0.3,
+      "validation_before": 0.756,
+      "validation_after": 0.547
+    },
+    {
+      "seed": 2,
+      "variant": "tolerant_capped",
+      "has_tail": true,
+      "validation_accuracy": 0.7435,
+      "previous_eta": 0.03125,
+      "residual_eta": 0.03125,
+      "validation_before": 0.756,
+      "validation_after": 0.7435
+    }
+  ],
+  "residual_comparisons": [
+    {
+      "seed": 0,
+      "tie_rule": "strict",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 24.249999999999993
+    },
+    {
+      "seed": 0,
+      "tie_rule": "tolerant",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 24.249999999999993
+    },
+    {
+      "seed": 1,
+      "tie_rule": "strict",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 0.0
+    },
+    {
+      "seed": 1,
+      "tie_rule": "tolerant",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 46.300000000000004
+    },
+    {
+      "seed": 2,
+      "tie_rule": "strict",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 19.650000000000002
+    },
+    {
+      "seed": 2,
+      "tie_rule": "tolerant",
+      "identical_prefix": true,
+      "capped_minus_legacy_validation_pp": 19.650000000000002
+    }
+  ],
+  "revised_frequencies": {
+    "total_steps": 894,
+    "controller_decisions": 894,
+    "tail_steps": 0,
+    "batch": {
+      "32": {
+        "count": 34,
+        "percent": 3.8031319910514543
+      },
+      "64": {
+        "count": 831,
+        "percent": 92.95302013422818
+      },
+      "128": {
+        "count": 29,
+        "percent": 3.243847874720358
+      }
+    },
+    "beta": {
+      "0.0": {
+        "count": 779,
+        "percent": 87.13646532438479
+      },
+      "0.5": {
+        "count": 114,
+        "percent": 12.751677852348994
+      },
+      "0.9": {
+        "count": 1,
+        "percent": 0.11185682326621924
+      }
+    },
+    "phases": [
+      {
+        "budget_fraction": [
+          0.0,
+          0.25
+        ],
+        "steps": 216,
+        "batch_64_percent": 88.88888888888889,
+        "beta_zero_percent": 88.88888888888889,
+        "mean_eta": 0.03494827835648148
+      },
+      {
+        "budget_fraction": [
+          0.25,
+          0.5
+        ],
+        "steps": 228,
+        "batch_64_percent": 92.10526315789474,
+        "beta_zero_percent": 86.40350877192982,
+        "mean_eta": 0.016763252124451754
+      },
+      {
+        "budget_fraction": [
+          0.5,
+          0.75
+        ],
+        "steps": 225,
+        "batch_64_percent": 95.55555555555556,
+        "beta_zero_percent": 88.0,
+        "mean_eta": 0.015745442708333335
+      },
+      {
+        "budget_fraction": [
+          0.75,
+          1.0
+        ],
+        "steps": 225,
+        "batch_64_percent": 95.11111111111111,
+        "beta_zero_percent": 85.33333333333333,
+        "mean_eta": 0.015106879340277778
+      }
+    ]
+  },
+  "pilot_audit": {
+    "protocol": "Every 20th controller step from step 0, plus a final controller step that exhausts the budget; selected before observing outcomes.",
+    "objective": "Entire retained 12000-example training split; no validation/test gradient.",
+    "sampled_steps": 48,
+    "accepted": 40,
+    "accepted_loss_increases": 6,
+    "skipped": 8,
+    "skipped_full_descent": 7,
+    "diagnostic_gradient_examples": 576000,
+    "diagnostic_forward_examples": 480000,
+    "decision_independent": true,
+    "excluded_from_optimization_budget_and_training_timing": true
+  },
+  "first_step_scores": [
+    {
+      "seed": 0,
+      "scores_by_batch": {
+        "32": [
+          {
+            "beta": 0.0,
+            "score": 6.479618060324825
+          },
+          {
+            "beta": 0.5,
+            "score": 6.479618060324825
+          },
+          {
+            "beta": 0.9,
+            "score": 6.47961806032483
+          },
+          {
+            "beta": 0.99,
+            "score": 6.4796180603248255
+          }
+        ],
+        "64": [
+          {
+            "beta": 0.0,
+            "score": 8.070623855164927
+          },
+          {
+            "beta": 0.5,
+            "score": 8.070623855164927
+          },
+          {
+            "beta": 0.9,
+            "score": 8.070623855164934
+          },
+          {
+            "beta": 0.99,
+            "score": 8.070623855164927
+          }
+        ],
+        "128": [
+          {
+            "beta": 0.0,
+            "score": 9.200123254239406
+          },
+          {
+            "beta": 0.5,
+            "score": 9.200123254239406
+          },
+          {
+            "beta": 0.9,
+            "score": 9.200123254239413
+          },
+          {
+            "beta": 0.99,
+            "score": 9.200123254239408
+          }
+        ]
+      },
+      "strict": [
+        128,
+        0.9,
+        9.200123254239413
+      ],
+      "tolerant": [
+        128,
+        0.0,
+        9.200123254239406
+      ]
+    },
+    {
+      "seed": 1,
+      "scores_by_batch": {
+        "32": [
+          {
+            "beta": 0.0,
+            "score": 2.5179237957886267
+          },
+          {
+            "beta": 0.5,
+            "score": 2.5179237957886267
+          },
+          {
+            "beta": 0.9,
+            "score": 2.5179237957886254
+          },
+          {
+            "beta": 0.99,
+            "score": 2.5179237957886262
+          }
+        ],
+        "64": [
+          {
+            "beta": 0.0,
+            "score": 3.227014213770274
+          },
+          {
+            "beta": 0.5,
+            "score": 3.227014213770274
+          },
+          {
+            "beta": 0.9,
+            "score": 3.2270142137702718
+          },
+          {
+            "beta": 0.99,
+            "score": 3.227014213770273
+          }
+        ],
+        "128": [
+          {
+            "beta": 0.0,
+            "score": 3.7558733028911715
+          },
+          {
+            "beta": 0.5,
+            "score": 3.7558733028911715
+          },
+          {
+            "beta": 0.9,
+            "score": 3.7558733028911697
+          },
+          {
+            "beta": 0.99,
+            "score": 3.7558733028911706
+          }
+        ]
+      },
+      "strict": [
+        128,
+        0.0,
+        3.7558733028911715
+      ],
+      "tolerant": [
+        128,
+        0.0,
+        3.7558733028911715
+      ]
+    },
+    {
+      "seed": 2,
+      "scores_by_batch": {
+        "32": [
+          {
+            "beta": 0.0,
+            "score": 4.902047251005929
+          },
+          {
+            "beta": 0.5,
+            "score": 4.902047251005929
+          },
+          {
+            "beta": 0.9,
+            "score": 4.902047251005934
+          },
+          {
+            "beta": 0.99,
+            "score": 4.902047251005929
+          }
+        ],
+        "64": [
+          {
+            "beta": 0.0,
+            "score": 6.069846709354763
+          },
+          {
+            "beta": 0.5,
+            "score": 6.069846709354763
+          },
+          {
+            "beta": 0.9,
+            "score": 6.069846709354767
+          },
+          {
+            "beta": 0.99,
+            "score": 6.069846709354763
+          }
+        ],
+        "128": [
+          {
+            "beta": 0.0,
+            "score": 6.890611130163441
+          },
+          {
+            "beta": 0.5,
+            "score": 6.890611130163441
+          },
+          {
+            "beta": 0.9,
+            "score": 6.890611130163445
+          },
+          {
+            "beta": 0.99,
+            "score": 6.890611130163441
+          }
+        ]
+      },
+      "strict": [
+        128,
+        0.9,
+        6.890611130163445
+      ],
+      "tolerant": [
+        128,
+        0.0,
+        6.890611130163441
+      ]
+    }
+  ],
+  "interpretation": "Residual cap and tie rule are separate interventions. Full-training audit shows sampled phenomena, not the cause of the entire accuracy gap."
+}

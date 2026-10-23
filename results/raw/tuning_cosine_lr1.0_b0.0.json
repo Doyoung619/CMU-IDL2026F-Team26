@@ -25,6 +25,10 @@
     "target_update_batch": 64,
     "price_step": 0.01,
     "initial_price": 0.05,
+    "selection_rtol": 1e-12,
+    "selection_atol": 1e-15,
+    "tail_policy": "cap_previous",
+    "audit_every": 20,
     "methods": [
       "fixed",
       "cosine",
@@ -66,8 +70,14 @@
   "pilot_gradient_examples": 0,
   "update_gradient_examples": 12800,
   "line_search_forward_examples": 0,
-  "training_seconds": 0.1259792000055313,
-  "monitor_evaluation_seconds": 0.05085740005597472,
+  "training_seconds": 0.18793409981299192,
+  "monitor_evaluation_seconds": 0.05872060009278357,
+  "diagnostic_seconds": 0.0,
+  "audits": [],
+  "tail_events": [],
+  "diagnostic_gradient_examples": 0,
+  "diagnostic_forward_examples": 0,
+  "parameter_sha256": "7303b51cbb1f42a6cdb7004aee2062844c1c288c7b41d0ce9f3a7f1073ad5f36",
   "validation": {
     "loss": 1.2991984881474052,
     "accuracy": 0.541
@@ -118,7 +128,8 @@
       "price": 0.0,
       "update_batch_loss": 2.4943074266446175,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 1,
@@ -132,7 +143,8 @@
       "price": 0.0,
       "update_batch_loss": 8.575099579730981,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 2,
@@ -146,7 +158,8 @@
       "price": 0.0,
       "update_batch_loss": 43.91144278350246,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 3,
@@ -160,7 +173,8 @@
       "price": 0.0,
       "update_batch_loss": 38.19308920017997,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 4,
@@ -174,7 +188,8 @@
       "price": 0.0,
       "update_batch_loss": 32.3981525969764,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 5,
@@ -188,7 +203,8 @@
       "price": 0.0,
       "update_batch_loss": 17.226983997110178,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 6,
@@ -202,7 +218,8 @@
       "price": 0.0,
       "update_batch_loss": 2.3353718089589774,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 7,
@@ -216,7 +233,8 @@
       "price": 0.0,
       "update_batch_loss": 2.3197864707204254,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 8,
@@ -230,7 +248,8 @@
       "price": 0.0,
       "update_batch_loss": 2.2756021401068107,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 9,
@@ -244,7 +263,8 @@
       "price": 0.0,
       "update_batch_loss": 2.216571634137371,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 10,
@@ -258,7 +278,8 @@
       "price": 0.0,
       "update_batch_loss": 2.1001440111643204,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 11,
@@ -272,7 +293,8 @@
       "price": 0.0,
       "update_batch_loss": 1.982371743426536,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 12,
@@ -286,7 +308,8 @@
       "price": 0.0,
       "update_batch_loss": 2.1161581380782084,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 13,
@@ -300,7 +323,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8578842124603074,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 14,
@@ -314,7 +338,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8559657296826415,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 15,
@@ -328,7 +353,8 @@
       "price": 0.0,
       "update_batch_loss": 2.4370667159770916,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 16,
@@ -342,7 +368,8 @@
       "price": 0.0,
       "update_batch_loss": 2.286617492908601,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 17,
@@ -356,7 +383,8 @@
       "price": 0.0,
       "update_batch_loss": 2.1229770130871044,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 18,
@@ -370,7 +398,8 @@
       "price": 0.0,
       "update_batch_loss": 1.9776740239525046,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 19,
@@ -384,7 +413,8 @@
       "price": 0.0,
       "update_batch_loss": 1.803578036894756,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 20,
@@ -398,7 +428,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7475337061042149,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 21,
@@ -412,7 +443,8 @@
       "price": 0.0,
       "update_batch_loss": 1.5628620816822458,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 22,
@@ -426,7 +458,8 @@
       "price": 0.0,
       "update_batch_loss": 2.104498580601107,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 23,
@@ -440,7 +473,8 @@
       "price": 0.0,
       "update_batch_loss": 2.4305695534825795,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 24,
@@ -454,7 +488,8 @@
       "price": 0.0,
       "update_batch_loss": 2.137717640871852,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 25,
@@ -468,7 +503,8 @@
       "price": 0.0,
       "update_batch_loss": 2.1427561213670123,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 26,
@@ -482,7 +518,8 @@
       "price": 0.0,
       "update_batch_loss": 2.0579189097554007,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 27,
@@ -496,7 +533,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7447824831063365,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 28,
@@ -510,7 +548,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7084023203173913,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 29,
@@ -524,7 +563,8 @@
       "price": 0.0,
       "update_batch_loss": 1.603165127447518,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 30,
@@ -538,7 +578,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7243585462456097,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 31,
@@ -552,7 +593,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8784035616217736,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 32,
@@ -566,7 +608,8 @@
       "price": 0.0,
       "update_batch_loss": 2.312446877357889,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 33,
@@ -580,7 +623,8 @@
       "price": 0.0,
       "update_batch_loss": 2.0192931407626564,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 34,
@@ -594,7 +638,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8936446205707467,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 35,
@@ -608,7 +653,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7475512201216696,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 36,
@@ -622,7 +668,8 @@
       "price": 0.0,
       "update_batch_loss": 1.750174751375078,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 37,
@@ -636,7 +683,8 @@
       "price": 0.0,
       "update_batch_loss": 1.6389073003637462,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 38,
@@ -650,7 +698,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7522303866028555,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 39,
@@ -664,7 +713,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7713388288118783,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 40,
@@ -678,7 +728,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8944964347814315,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 41,
@@ -692,7 +743,8 @@
       "price": 0.0,
       "update_batch_loss": 1.8627080689592441,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 42,
@@ -706,7 +758,8 @@
       "price": 0.0,
       "update_batch_loss": 1.9278404113505305,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 43,
@@ -720,7 +773,8 @@
       "price": 0.0,
       "update_batch_loss": 1.837192594657455,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 44,
@@ -734,7 +788,8 @@
       "price": 0.0,
       "update_batch_loss": 1.731654851217452,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 45,
@@ -748,7 +803,8 @@
       "price": 0.0,
       "update_batch_loss": 1.6598262816382134,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 46,
@@ -762,7 +818,8 @@
       "price": 0.0,
       "update_batch_loss": 1.487665383583754,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 47,
@@ -776,7 +833,8 @@
       "price": 0.0,
       "update_batch_loss": 1.6976931188188553,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 48,
@@ -790,7 +848,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7343932723763626,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 49,
@@ -804,7 +863,8 @@
       "price": 0.0,
       "update_batch_loss": 1.7647373720324595,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 50,
@@ -818,7 +878,8 @@
       "price": 0.0,
       "update_batch_loss": 1.6684728252345415,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 51,
@@ -832,7 +893,8 @@
       "price": 0.0,
       "update_batch_loss": 1.5166385576816013,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 52,
@@ -846,7 +908,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4691275837002407,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 53,
@@ -860,7 +923,8 @@
       "price": 0.0,
       "update_batch_loss": 1.62603403338792,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 54,
@@ -874,7 +938,8 @@
       "price": 0.0,
       "update_batch_loss": 1.570053822830819,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 55,
@@ -888,7 +953,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3645018742631225,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 56,
@@ -902,7 +968,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4845844495504914,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 57,
@@ -916,7 +983,8 @@
       "price": 0.0,
       "update_batch_loss": 1.6992604830334015,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 58,
@@ -930,7 +998,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4865558095352107,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 59,
@@ -944,7 +1013,8 @@
       "price": 0.0,
       "update_batch_loss": 1.510601246764234,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 60,
@@ -958,7 +1028,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4428882608952283,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 61,
@@ -972,7 +1043,8 @@
       "price": 0.0,
       "update_batch_loss": 1.375956023587738,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 62,
@@ -986,7 +1058,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4557279726014363,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 63,
@@ -1000,7 +1073,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4531835245103895,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 64,
@@ -1014,7 +1088,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2928902434433311,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 65,
@@ -1028,7 +1103,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3610136935845145,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 66,
@@ -1042,7 +1118,8 @@
       "price": 0.0,
       "update_batch_loss": 1.496606337913009,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 67,
@@ -1056,7 +1133,8 @@
       "price": 0.0,
       "update_batch_loss": 1.515057694068414,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 68,
@@ -1070,7 +1148,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4159297740877843,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 69,
@@ -1084,7 +1163,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3853349520663585,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 70,
@@ -1098,7 +1178,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3175571468792318,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 71,
@@ -1112,7 +1193,8 @@
       "price": 0.0,
       "update_batch_loss": 1.421914704716795,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 72,
@@ -1126,7 +1208,8 @@
       "price": 0.0,
       "update_batch_loss": 1.346665778887787,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 73,
@@ -1140,7 +1223,8 @@
       "price": 0.0,
       "update_batch_loss": 1.366089472779167,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 74,
@@ -1154,7 +1238,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4346804006379859,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 75,
@@ -1168,7 +1253,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3345132777854705,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 76,
@@ -1182,7 +1268,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4075837178229804,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 77,
@@ -1196,7 +1283,8 @@
       "price": 0.0,
       "update_batch_loss": 1.369423229183043,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 78,
@@ -1210,7 +1298,8 @@
       "price": 0.0,
       "update_batch_loss": 1.469075314859979,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 79,
@@ -1224,7 +1313,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4181699362243094,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 80,
@@ -1238,7 +1328,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2428031534237018,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 81,
@@ -1252,7 +1343,8 @@
       "price": 0.0,
       "update_batch_loss": 1.333345659655314,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 82,
@@ -1266,7 +1358,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2693524126552185,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 83,
@@ -1280,7 +1373,8 @@
       "price": 0.0,
       "update_batch_loss": 1.24977822166232,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 84,
@@ -1294,7 +1388,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2370029446045774,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 85,
@@ -1308,7 +1403,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2635329960350141,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 86,
@@ -1322,7 +1418,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2903033372971784,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 87,
@@ -1336,7 +1433,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2945244659711954,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 88,
@@ -1350,7 +1448,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4159886441550489,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 89,
@@ -1364,7 +1463,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3489126858303306,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 90,
@@ -1378,7 +1478,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3616695280326068,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 91,
@@ -1392,7 +1493,8 @@
       "price": 0.0,
       "update_batch_loss": 1.1917968150845417,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 92,
@@ -1406,7 +1508,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2682813611124146,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 93,
@@ -1420,7 +1523,8 @@
       "price": 0.0,
       "update_batch_loss": 1.3253805683114326,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 94,
@@ -1434,7 +1538,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2513115440754556,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 95,
@@ -1448,7 +1553,8 @@
       "price": 0.0,
       "update_batch_loss": 1.4067321560426371,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 96,
@@ -1462,7 +1568,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2669731811699243,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 97,
@@ -1476,7 +1583,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2876722102823288,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 98,
@@ -1490,7 +1598,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2055663449841758,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     },
     {
       "step": 99,
@@ -1504,7 +1613,8 @@
       "price": 0.0,
       "update_batch_loss": 1.2934955362357021,
       "line_search_status": "fixed_schedule",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {}
     }
   ]
 }

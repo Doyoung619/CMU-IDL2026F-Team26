@@ -1,6 +1,7 @@
 """Fail on inconsistent saved evidence; does not rerun or alter experiments."""
 import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 import numpy as np
 
@@ -29,6 +30,15 @@ def main():
             assert run['pilot_gradient_examples']+run['update_gradient_examples']==38400
             assert sum(step['line_search_forward_examples'] for step in run['steps'])==run['line_search_forward_examples']
             assert run['curve'][-1]['gradient_examples']==38400
+            for tail in run['tail_events']:
+                assert tail['policy']=='cap_previous' and tail['eta']<=tail['previous_eta']
+            for s in run['steps']:
+                detail=s['selection']
+                if detail:
+                    assert detail['priced_gap']<=detail['tolerance']+1e-20
+            assert run['diagnostic_gradient_examples']==sum(a['gradient_examples'] for a in run['audits'])
+            assert all(a['gradient_examples']==12000 for a in run['audits'])
+            if method=='joint':assert run['steps'][0]['beta']==0.
             assert 0<=run['test']['accuracy']<=1 and run['test']['loss']>=0
             accuracies.append(100*run['test']['accuracy'])
         np.testing.assert_allclose(stats[method]['test_accuracy'],
@@ -49,7 +59,24 @@ def main():
     assert len(oracle['states'])==60 and len(oracle['candidates'])==720
     assert sum(s['agrees'] for s in oracle['states'])==57
     assert all(c['mc_progress']+3*c['mc_standard_error']>=c['certificate']-1e-10 for c in oracle['candidates'])
-    print('PASS: source hashes, splits, 18 neural budgets, no test tuning, 30 synthetic runs, oracle, aggregation')
+    feedback=read(root/'feedback/summary.json')
+    assert len(feedback['residual_variants'])==12 and all(c['identical_prefix'] for c in feedback['residual_comparisons'])
+    audit=read(root/'feedback/pilot_audit.json')
+    assert audit['summary']['sampled_steps']==len(audit['steps'])
+    assert audit['summary']['diagnostic_gradient_examples']==12000*len(audit['steps'])
+    assert audit['summary']['accepted_loss_increases']==sum(a['accepted_loss_increase'] for a in audit['steps'])
+    assert audit['summary']['skipped_full_descent']==sum(a['skipped_full_descent'] for a in audit['steps'])
+    decisions=[s for seed in config['seeds'] for s in read(root/f'raw/neural_joint_seed{seed}.json')['steps'] if s['pilot']>0]
+    frequencies=feedback['revised_frequencies']
+    assert frequencies['controller_decisions']==len(decisions)
+    for key in ['batch','beta']:
+        actual=Counter(str(s[key]) for s in decisions)
+        assert actual==Counter({k:v['count'] for k,v in frequencies[key].items()})
+        for value in frequencies[key].values():
+            assert np.isclose(value['percent'],100*value['count']/len(decisions))
+    for path,expected in read(root/'feedback/source_manifest.json').items():
+        assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==expected,path
+    print('PASS: source hashes, budgets, split/test separation, residual caps, tolerant ties, paired prefixes, pilot audit, aggregation, synthetic oracle')
 
 
 if __name__=='__main__':main()

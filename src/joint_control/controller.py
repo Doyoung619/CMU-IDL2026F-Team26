@@ -10,14 +10,36 @@ def score(gradient, velocity, variance, batch, beta):
     return max(alignment, 0.)**2 / second_moment if second_moment > 0 else 0.
 
 
-def select(gradient, velocity, variance, batches, betas, price):
+def select(gradient, velocity, variance, batches, betas, price,
+           rtol=1e-12, atol=1e-15, return_details=False):
     if not batches or price < 0:
         raise ValueError('Need feasible batches and nonnegative price')
-    # Sorted enumeration provides deterministic small-batch, low-beta tie breaks.
+    if rtol < 0 or atol < 0:
+        raise ValueError('Tie tolerances must be nonnegative')
+    # Compare every candidate to the global maximum, not pairwise, to avoid
+    # nontransitive chains of near-ties. Sorted order favors smaller B then beta.
     candidates = [(score(gradient, velocity, variance, b, beta)-price*b,
                    b, beta) for b in sorted(batches) for beta in sorted(betas)]
-    _, batch, beta = max(candidates, key=lambda x: x[0])
-    return batch, beta, score(gradient, velocity, variance, batch, beta)
+    best = max(c[0] for c in candidates)
+    tied = [c for c in candidates
+            if best-c[0] <= atol+rtol*max(abs(best),abs(c[0]))]
+    chosen, batch, beta = tied[0]
+    result = (batch, beta, score(gradient, velocity, variance, batch, beta))
+    if return_details:
+        return (*result, dict(near_tie_count=len(tied), best_priced_score=best,
+                             chosen_priced_score=chosen, priced_gap=best-chosen,
+                             tolerance=atol+rtol*max(abs(best),abs(chosen))))
+    return result
+
+
+def residual_learning_rate(fixed_lr, previous_eta, policy='cap_previous'):
+    if fixed_lr < 0 or previous_eta < 0:
+        raise ValueError('Learning rates must be nonnegative')
+    if policy == 'cap_previous':
+        return min(fixed_lr, previous_eta)
+    if policy == 'legacy_fixed':
+        return fixed_lr
+    raise ValueError(f'Unknown residual policy: {policy}')
 
 
 def pilot_statistics(gradients, microbatch_size):

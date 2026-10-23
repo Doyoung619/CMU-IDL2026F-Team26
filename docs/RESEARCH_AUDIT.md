@@ -41,8 +41,9 @@ project or sibling course directories. GitHub was empty on inspection.
    gradient-example equality is not equality of FLOPs or elapsed time.
 3. Neural runs use a fixed total budget and variable update horizon; reference
    synthetic trajectories retain the proposal's fixed horizon. A final small
-   residual neural batch uses the selected fixed-SGDM rule when a pilot plus
-   update cannot fit, and is explicitly logged. No data-dependent test tuning.
+   residual neural batch uses a fixed-SGDM direction when a pilot plus update
+   cannot fit. Its rate is capped by the last positive accepted Armijo rate
+   (2026-10-23 correction), never blindly reset to 0.3. No test-dependent tuning.
 4. Pilot variance uses independent equal-sized microbatches: microbatch size
    times the unbiased trace sample covariance of their gradients. It estimates
    per-example variance; it is noisy and is not a certified upper bound.
@@ -57,6 +58,13 @@ project or sibling course directories. GitHub was empty on inspection.
 8. Known team roster is preserved. User subsequently confirmed roles: Doyoung
    theory/experiments; Seongbeom experiments; Chaeyeon and Ivor writing/verification.
    These are attributed responsibilities rather than Git-verified authorship.
+9. Numerical near-ties are measured against the global maximum with atol 1e-15
+   and rtol 1e-12, favoring smaller B and then smaller beta. Exact mathematical
+   score guarantees are relaxed only by the stated numerical selection tolerance.
+10. A training-only, decision-independent observer audits prescribed Pilot-64
+    steps. Diagnostic gradients/forwards are recorded separately and excluded
+    from optimizer budgets and reported training time. Tests check observer
+    noninterference. Observations do not identify the entire accuracy-gap cause.
 
 ## Evaluation controls
 

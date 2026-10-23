@@ -9,8 +9,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.5697962001431733,
-    "monitor_evaluation_seconds": 0.1768989998381585,
+    "training_seconds": 0.4531434999080375,
+    "monitor_evaluation_seconds": 0.12384030013345182,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "cbb0295c6fb7964174803aabee4d9c55d5909b4e0b86e0bcc3c56a6a31aa38f8",
     "validation": {
       "loss": 0.49686912818655976,
       "accuracy": 0.8295
@@ -30,8 +34,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.45843680028337985,
-    "monitor_evaluation_seconds": 0.13997659971937537,
+    "training_seconds": 0.46741589985322207,
+    "monitor_evaluation_seconds": 0.13466960017103702,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "3bc52decd4ea1ac22f13765e8af89e6678ee87fb01cab4eb1f98b8dfca5a0104",
     "validation": {
       "loss": 0.4756273932930913,
       "accuracy": 0.838
@@ -51,8 +59,12 @@
     "pilot_gradient_examples": 19328,
     "update_gradient_examples": 19072,
     "line_search_forward_examples": 50112,
-    "training_seconds": 2.4558459002291784,
-    "monitor_evaluation_seconds": 0.13889839977491647,
+    "training_seconds": 2.263299399870448,
+    "monitor_evaluation_seconds": 0.13664960011374205,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "cfd5be22745bce7d5587d5122a0316b3fcf8d1986b956e5c2e3872d235053c99",
     "validation": {
       "loss": 0.6410585736577935,
       "accuracy": 0.759
@@ -71,16 +83,20 @@
     "gradient_examples": 38400,
     "pilot_gradient_examples": 19072,
     "update_gradient_examples": 19328,
-    "line_search_forward_examples": 63552,
-    "training_seconds": 2.9072314996737987,
-    "monitor_evaluation_seconds": 0.1453390003880486,
+    "line_search_forward_examples": 60160,
+    "training_seconds": 2.485969500034116,
+    "monitor_evaluation_seconds": 0.13693519996013492,
+    "diagnostic_seconds": 1.308418000000529,
+    "diagnostic_gradient_examples": 192000,
+    "diagnostic_forward_examples": 144000,
+    "parameter_sha256": "2624a3ef17fadcf460815a5292f985d541d2412cb84cac465d027eab017d98b9",
     "validation": {
-      "loss": 0.7684083635175744,
-      "accuracy": 0.7285
+      "loss": 0.7940875051001282,
+      "accuracy": 0.7115
     },
     "test": {
-      "loss": 0.7767164543971636,
-      "accuracy": 0.7129
+      "loss": 0.8036413669366601,
+      "accuracy": 0.7014
     }
   },
   {
@@ -92,16 +108,20 @@
     "gradient_examples": 38400,
     "pilot_gradient_examples": 19200,
     "update_gradient_examples": 19200,
-    "line_search_forward_examples": 60736,
-    "training_seconds": 2.3645576998824254,
-    "monitor_evaluation_seconds": 0.13598990009631962,
+    "line_search_forward_examples": 59200,
+    "training_seconds": 2.2032289997441694,
+    "monitor_evaluation_seconds": 0.15886290033813566,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "b4e1f14e0e0999f0bce2fa7b8eacb4b35185f92a6fdfdd3f54e9137fa5d8a04f",
     "validation": {
-      "loss": 0.7781266838341587,
-      "accuracy": 0.735
+      "loss": 0.8069220879184145,
+      "accuracy": 0.703
     },
     "test": {
-      "loss": 0.7864947446079639,
-      "accuracy": 0.7246
+      "loss": 0.8132977819651659,
+      "accuracy": 0.6958
     }
   },
   {
@@ -114,15 +134,19 @@
     "pilot_gradient_examples": 12704,
     "update_gradient_examples": 25696,
     "line_search_forward_examples": 39552,
-    "training_seconds": 3.2253683002199978,
-    "monitor_evaluation_seconds": 0.13657169986981899,
+    "training_seconds": 3.3434332999167964,
+    "monitor_evaluation_seconds": 0.13938400009647012,
+    "diagnostic_seconds": 0.010523600038141012,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "e3e5d3b3af5349f774981d4b2d491a8708572eedd29cc125ced58f5fc469435e",
     "validation": {
-      "loss": 1.6358204492403121,
-      "accuracy": 0.538
+      "loss": 0.6954032007796281,
+      "accuracy": 0.7805
     },
     "test": {
-      "loss": 1.6319086034946622,
-      "accuracy": 0.5215
+      "loss": 0.699743898864932,
+      "accuracy": 0.77
     }
   },
   {
@@ -135,8 +159,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.4261610002722591,
-    "monitor_evaluation_seconds": 0.14870879973750561,
+    "training_seconds": 0.32282360014505684,
+    "monitor_evaluation_seconds": 0.14095019991509616,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "14826dd9248d0629f74cc11bebd8a6632c159bba4c3ac14141470b136b7cd148",
     "validation": {
       "loss": 0.49877495436050107,
       "accuracy": 0.8265
@@ -156,8 +184,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.37258549977559596,
-    "monitor_evaluation_seconds": 0.13936640019528568,
+    "training_seconds": 0.3299563997425139,
+    "monitor_evaluation_seconds": 0.1355292001971975,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "d1a80ee6dd6ba06fa9a4d83999c89202a3687d4ab6bc262a8db5903b82a47722",
     "validation": {
       "loss": 0.4713397617564911,
       "accuracy": 0.8385
@@ -177,15 +209,19 @@
     "pilot_gradient_examples": 19328,
     "update_gradient_examples": 19072,
     "line_search_forward_examples": 57152,
-    "training_seconds": 1.9219043997582048,
-    "monitor_evaluation_seconds": 0.10798060020897537,
+    "training_seconds": 2.307019100058824,
+    "monitor_evaluation_seconds": 0.1345811999635771,
+    "diagnostic_seconds": 0.008796200039796531,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "5d1f5240af0053a2abd5d67ecce36f845e3dc01941fd3c799a69df75b2e65763",
     "validation": {
-      "loss": 0.6777504130731227,
-      "accuracy": 0.7515
+      "loss": 0.575349376328075,
+      "accuracy": 0.801
     },
     "test": {
-      "loss": 0.6797815705837573,
-      "accuracy": 0.7552
+      "loss": 0.5827592317937611,
+      "accuracy": 0.7977
     }
   },
   {
@@ -198,8 +234,12 @@
     "pilot_gradient_examples": 19072,
     "update_gradient_examples": 19328,
     "line_search_forward_examples": 57664,
-    "training_seconds": 1.9893943001516163,
-    "monitor_evaluation_seconds": 0.10019609984010458,
+    "training_seconds": 2.036523300106637,
+    "monitor_evaluation_seconds": 0.10487299994565547,
+    "diagnostic_seconds": 1.0687972998712212,
+    "diagnostic_gradient_examples": 192000,
+    "diagnostic_forward_examples": 180000,
+    "parameter_sha256": "4b9cb49b6c45d59db8537aae92f0683155809288530a9b81ec88e3f5b461d4f8",
     "validation": {
       "loss": 0.7431459090006692,
       "accuracy": 0.7485
@@ -219,8 +259,12 @@
     "pilot_gradient_examples": 19200,
     "update_gradient_examples": 19200,
     "line_search_forward_examples": 58752,
-    "training_seconds": 1.8698220001533628,
-    "monitor_evaluation_seconds": 0.10029709979426116,
+    "training_seconds": 2.434570499928668,
+    "monitor_evaluation_seconds": 0.13325610011816025,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "aef46ec1971dfde96831dae7539c2b59df06119213eccb085dcad2088c0358b1",
     "validation": {
       "loss": 0.7522616181589246,
       "accuracy": 0.7405
@@ -239,16 +283,20 @@
     "gradient_examples": 38400,
     "pilot_gradient_examples": 12704,
     "update_gradient_examples": 25696,
-    "line_search_forward_examples": 37696,
-    "training_seconds": 2.4745155001292005,
-    "monitor_evaluation_seconds": 0.10271569981705397,
+    "line_search_forward_examples": 35552,
+    "training_seconds": 2.6675927001051605,
+    "monitor_evaluation_seconds": 0.12190959975123405,
+    "diagnostic_seconds": 0.006976300152018666,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "ae917156540159f2e51faa4ebef183741fcd99293696272303293ed7215eea8a",
     "validation": {
-      "loss": 0.6806520494856056,
-      "accuracy": 0.768
+      "loss": 0.6765372874420431,
+      "accuracy": 0.775
     },
     "test": {
-      "loss": 0.691114489637607,
-      "accuracy": 0.7676
+      "loss": 0.6848555332679983,
+      "accuracy": 0.7675
     }
   },
   {
@@ -261,8 +309,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.2856243997812271,
-    "monitor_evaluation_seconds": 0.10991470015142113,
+    "training_seconds": 0.2223052999470383,
+    "monitor_evaluation_seconds": 0.09518270008265972,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "ebf66c495c193b763e26103ee0bcf354177da1216da15cabc0f7811d3aeef67b",
     "validation": {
       "loss": 0.53209542489088,
       "accuracy": 0.8015
@@ -282,8 +334,12 @@
     "pilot_gradient_examples": 0,
     "update_gradient_examples": 38400,
     "line_search_forward_examples": 0,
-    "training_seconds": 0.27639509981963784,
-    "monitor_evaluation_seconds": 0.10099150007590652,
+    "training_seconds": 0.2518383996794,
+    "monitor_evaluation_seconds": 0.09925680025480688,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "86d0fdfdd5402b56d374d87c166cd3ee614da4e0ca18db2f652039d2cf520296",
     "validation": {
       "loss": 0.471654321470816,
       "accuracy": 0.8365
@@ -303,15 +359,19 @@
     "pilot_gradient_examples": 19328,
     "update_gradient_examples": 19072,
     "line_search_forward_examples": 53120,
-    "training_seconds": 1.7500881002051756,
-    "monitor_evaluation_seconds": 0.10095389978960156,
+    "training_seconds": 1.8360786000266671,
+    "monitor_evaluation_seconds": 0.10837539995554835,
+    "diagnostic_seconds": 0.006464799982495606,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "0c866b76f913db0f1d9567cebb46d1a301ff56e29586b1a69de6cebd6bd7babb",
     "validation": {
-      "loss": 0.6536613202803617,
-      "accuracy": 0.7655
+      "loss": 0.6165455342967218,
+      "accuracy": 0.7915
     },
     "test": {
-      "loss": 0.6515918784965323,
-      "accuracy": 0.7671
+      "loss": 0.6114361477087301,
+      "accuracy": 0.7896
     }
   },
   {
@@ -323,16 +383,20 @@
     "gradient_examples": 38400,
     "pilot_gradient_examples": 19072,
     "update_gradient_examples": 19328,
-    "line_search_forward_examples": 61056,
-    "training_seconds": 1.8346989997662604,
-    "monitor_evaluation_seconds": 0.10097810020670295,
+    "line_search_forward_examples": 62464,
+    "training_seconds": 1.977550400304608,
+    "monitor_evaluation_seconds": 0.10397069994360209,
+    "diagnostic_seconds": 0.9342358998255804,
+    "diagnostic_gradient_examples": 192000,
+    "diagnostic_forward_examples": 156000,
+    "parameter_sha256": "7c71f7f122d48a1b5e339e98376b32f40a0ce16a13848d23ca4ba79e300e84dd",
     "validation": {
-      "loss": 0.7445051052339234,
-      "accuracy": 0.735
+      "loss": 0.7409412745747307,
+      "accuracy": 0.743
     },
     "test": {
-      "loss": 0.7494619620819031,
-      "accuracy": 0.7358
+      "loss": 0.7468924593931807,
+      "accuracy": 0.7377
     }
   },
   {
@@ -344,16 +408,20 @@
     "gradient_examples": 38400,
     "pilot_gradient_examples": 19200,
     "update_gradient_examples": 19200,
-    "line_search_forward_examples": 63296,
-    "training_seconds": 1.79129539988935,
-    "monitor_evaluation_seconds": 0.10667820007074624,
+    "line_search_forward_examples": 64576,
+    "training_seconds": 2.0745057997992262,
+    "monitor_evaluation_seconds": 0.11851240019313991,
+    "diagnostic_seconds": 0.0,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "93f1471d8c109cafc814313a5228e87b6ee19ffb85d7788530fd53206eec9853",
     "validation": {
-      "loss": 0.7402260085114978,
-      "accuracy": 0.7645
+      "loss": 0.7396563131259707,
+      "accuracy": 0.754
     },
     "test": {
-      "loss": 0.7485487888460601,
-      "accuracy": 0.7485
+      "loss": 0.7462771866338226,
+      "accuracy": 0.7483
     }
   },
   {
@@ -366,15 +434,19 @@
     "pilot_gradient_examples": 12704,
     "update_gradient_examples": 25696,
     "line_search_forward_examples": 36576,
-    "training_seconds": 2.5970582999289036,
-    "monitor_evaluation_seconds": 0.10173330013640225,
+    "training_seconds": 2.5224156996700913,
+    "monitor_evaluation_seconds": 0.10237360023893416,
+    "diagnostic_seconds": 0.007819300051778555,
+    "diagnostic_gradient_examples": 0,
+    "diagnostic_forward_examples": 0,
+    "parameter_sha256": "6d3a3abd55855d2c4fe74c0064330c7fc70963cc4a001f3a1007ad45b80b6a11",
     "validation": {
-      "loss": 1.633883922326827,
-      "accuracy": 0.547
+      "loss": 0.7726676322920148,
+      "accuracy": 0.7435
     },
     "test": {
-      "loss": 1.6517913321788285,
-      "accuracy": 0.5441
+      "loss": 0.7818510215255207,
+      "accuracy": 0.7336
     }
   }
 ]

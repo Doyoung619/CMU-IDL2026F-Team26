@@ -43,7 +43,7 @@ def main():
             updates=mean_sd([len(r['steps']) for r in raw]),
             skip_percent=mean_sd([100*sum(s['line_search_status']=='non_descent' for s in r['steps'])/len(r['steps']) for r in raw]),
             capped=sum(s['line_search_status']=='capped' for r in raw for s in r['steps']),
-            tail_steps=sum(s['line_search_status']=='tail_fixed_sgdm' for r in raw for s in r['steps']))
+            tail_steps=sum(s['line_search_status'].startswith('tail_') for r in raw for s in r['steps']))
     save_json(root/'aggregated/neural_summary.json',stats)
     fig,axes=plt.subplots(1,2,figsize=(5.5,2.35),gridspec_kw={'width_ratios':[1.25,1]})
     grid=np.arange(0,38401,3200)
@@ -88,18 +88,43 @@ def main():
     fig.tight_layout(pad=.5)
     for ext in ['pdf','png']:fig.savefig(figs/f'synthetic_results.{ext}',dpi=200,bbox_inches='tight')
     plt.close(fig)
-    # A compact cost diagnostic uses all actual per-step records.
-    fig,axes=plt.subplots(1,3,figsize=(7.6,1.95))
+    feedback=json.loads((root/'feedback/summary.json').read_text())
+    frequency=feedback['revised_frequencies']
+    # Frequencies expose how many of the nominal controls are actually exercised.
+    fig,axes=plt.subplots(1,3,figsize=(5.5,1.85))
+    for axis,key,title in [(axes[0],'batch','Update batch'),(axes[1],'beta','Momentum')]:
+        counts=frequency[key]
+        labels=['32','64','128'] if key=='batch' else ['0.0','0.5','0.9','0.99']
+        values=[counts.get(k,{'percent':0.})['percent'] for k in labels]
+        axis.bar(np.arange(len(labels)),values,color=COLORS['joint'],width=.65)
+        axis.set(xticks=np.arange(len(labels)),xticklabels=labels,ylim=(0,108),title=title)
+        axis.tick_params(axis='x',labelsize=7)
+        for i,value in enumerate(values):axis.text(i,value+2,f'{value:.1f}',ha='center',fontsize=7)
+    axes[0].set_ylabel('Controller decisions (%)')
+    axes[1].set_yticklabels([])
     joint=[json.loads((root/f'raw/neural_joint_seed{s}.json').read_text()) for s in [0,1,2]]
-    for axis,key,title in zip(axes,['batch','beta','eta'],['Chosen update batch','Chosen momentum','Accepted learning rate']):
-        for seed,run in enumerate(joint):
-            axis.plot([r['gradient_examples']/1000 for r in run['steps']],[r[key] for r in run['steps']],
-                      lw=.5,alpha=.6,label=f'Seed {seed}')
-        axis.set(xlabel='Gradient examples (thousands)',title=title)
-    axes[2].set_yscale('symlog',linthresh=.01)
-    axes[0].legend(fontsize=6,frameon=False)
+    edges=np.linspace(0,38400,21)
+    for seed,run in enumerate(joint):
+        means=[np.mean([r['eta'] for r in run['steps'] if lo<r['gradient_examples']<=hi])
+               for lo,hi in zip(edges[:-1],edges[1:])]
+        axes[2].plot((edges[:-1]+edges[1:])/2000,means,lw=1.,label=f'Seed {seed}')
+    axes[2].set(xlabel='Gradient examples (k)',title='Mean learning rate',ylim=(0,None))
+    axes[2].legend(fontsize=6.5,frameon=False,handlelength=1)
     fig.tight_layout(pad=.5)
     for ext in ['pdf','png']:fig.savefig(figs/f'controller_diagnostics.{ext}',dpi=200,bbox_inches='tight')
+    plt.close(fig)
+    # Separate controlled plots retain the legacy trajectory as evidence.
+    fig,axes=plt.subplots(1,2,figsize=(5.5,2.15),sharey=True)
+    for axis,rule in zip(axes,['strict','tolerant']):
+        for offset,policy in [(-.22,'legacy'),(.22,'capped')]:
+            records=sorted([r for r in feedback['residual_variants'] if r['variant']==f'{rule}_{policy}'],key=lambda r:r['seed'])
+            axis.bar(np.arange(3)+offset,[100*r['validation_accuracy'] for r in records],width=.42,
+                     color='#697386' if policy=='legacy' else '#059669',label=policy)
+        axis.set(xticks=np.arange(3),xticklabels=['0','1','2'],xlabel='Seed',title=f'{rule.title()} tie rule',ylim=(20,85))
+        axis.legend(fontsize=7,frameon=False)
+    axes[0].set_ylabel('Final validation accuracy (%)')
+    fig.tight_layout(pad=.5)
+    for ext in ['pdf','png']:fig.savefig(figs/f'residual_ablation.{ext}',dpi=200,bbox_inches='tight')
     plt.close(fig)
     lines=['\\begin{tabular}{lrrrr}',r'\toprule',
            r'Method & Test acc. (\%) & Test CE & Time (s) & Pilot (\%) \\',r'\midrule']
@@ -126,14 +151,15 @@ def main():
         evidence=report/'evidence';evidence.mkdir(exist_ok=True)
         for name in ['neural_summary.json','synthetic_summary.json','tuning.json']:
             shutil.copy2(root/'aggregated'/name,evidence/name)
+        shutil.copy2(root/'feedback/summary.json',evidence/'feedback_summary.json')
+        shutil.copy2(root/'feedback/published_reference.json',evidence/'published_reference.json')
         save_json(evidence/'oracle_summary.json',oracle['summary'])
         hashes={str(p.relative_to(root)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest()
                 for folder in [figs,tables,root/'aggregated'] for p in folder.iterdir() if p.is_file()}
         save_json(evidence/'artifact_hashes.json',hashes)
     save_json(root/'plotting_manifest.json',{'script':'scripts/figures.py',
               'sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()})
-    print(json.dumps(stats,indent=2))
-    print('SYNTHETIC',json.dumps(synthstats,indent=2))
+    print('TEST ACCURACY', {m:stats[m]['test_accuracy'] for m in methods})
     print('ORACLE',oracle['summary'])
 
 

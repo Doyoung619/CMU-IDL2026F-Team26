@@ -9,7 +9,7 @@
   "final_loss": 0.00246616315267407,
   "maximum_loss": 7.682076388653999,
   "update_examples": 12480,
-  "seconds": 0.012231700005941093,
+  "seconds": 0.012862099916674197,
   "steps": [
     {
       "step": 0,

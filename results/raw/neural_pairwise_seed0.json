@@ -25,6 +25,10 @@
     "target_update_batch": 64,
     "price_step": 0.01,
     "initial_price": 0.05,
+    "selection_rtol": 1e-12,
+    "selection_atol": 1e-15,
+    "tail_policy": "cap_previous",
+    "audit_every": 20,
     "methods": [
       "fixed",
       "cosine",
@@ -66,8 +70,14 @@
   "pilot_gradient_examples": 19328,
   "update_gradient_examples": 19072,
   "line_search_forward_examples": 50112,
-  "training_seconds": 2.4558459002291784,
-  "monitor_evaluation_seconds": 0.13889839977491647,
+  "training_seconds": 2.263299399870448,
+  "monitor_evaluation_seconds": 0.13664960011374205,
+  "diagnostic_seconds": 0.0,
+  "audits": [],
+  "tail_events": [],
+  "diagnostic_gradient_examples": 0,
+  "diagnostic_forward_examples": 0,
+  "parameter_sha256": "cfd5be22745bce7d5587d5122a0316b3fcf8d1986b956e5c2e3872d235053c99",
   "validation": {
     "loss": 0.6410585736577935,
     "accuracy": 0.759
@@ -169,7 +179,14 @@
       "price": 0.016714405991563458,
       "update_batch_loss": 2.577569469455562,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 7.0606792873192905,
+        "chosen_priced_score": 7.0606792873192905,
+        "priced_gap": 0.0,
+        "tolerance": 7.06167928731929e-12
+      }
     },
     {
       "step": 1,
@@ -183,7 +200,14 @@
       "price": 0.00750146546490863,
       "update_batch_loss": 2.2427993177338426,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.0014925142370683,
+        "chosen_priced_score": 2.0014925142370683,
+        "priced_gap": 0.0,
+        "tolerance": 2.0024925142370685e-12
+      }
     },
     {
       "step": 2,
@@ -197,7 +221,14 @@
       "price": 0.006793522096779414,
       "update_batch_loss": 2.380940781850489,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7354909663197133,
+        "chosen_priced_score": 0.7354909663197133,
+        "priced_gap": 0.0,
+        "tolerance": 7.364909663197133e-13
+      }
     },
     {
       "step": 3,
@@ -211,7 +242,14 @@
       "price": 0.0032250020130547147,
       "update_batch_loss": 2.140385394092943,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.48598281823404077,
+        "chosen_priced_score": 0.48598281823404077,
+        "priced_gap": 0.0,
+        "tolerance": 4.869828182340408e-13
+      }
     },
     {
       "step": 4,
@@ -225,7 +263,14 @@
       "price": 0.004275265450690736,
       "update_batch_loss": 1.8933651122697568,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7469825741936381,
+        "chosen_priced_score": 0.7469825741936381,
+        "priced_gap": 0.0,
+        "tolerance": 7.479825741936381e-13
+      }
     },
     {
       "step": 5,
@@ -239,7 +284,14 @@
       "price": 0.005055410746290108,
       "update_batch_loss": 1.920067159467935,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4595662803438804,
+        "chosen_priced_score": 0.4595662803438804,
+        "priced_gap": 0.0,
+        "tolerance": 4.605662803438804e-13
+      }
     },
     {
       "step": 6,
@@ -253,7 +305,14 @@
       "price": 0.003981407617995301,
       "update_batch_loss": 1.468836761357866,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.29745209647131043,
+        "chosen_priced_score": 0.29745209647131043,
+        "priced_gap": 0.0,
+        "tolerance": 2.984520964713104e-13
+      }
     },
     {
       "step": 7,
@@ -267,7 +326,14 @@
       "price": 0.005976270792984244,
       "update_batch_loss": 1.5429437600525944,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4778424634584668,
+        "chosen_priced_score": 1.4778424634584668,
+        "priced_gap": 0.0,
+        "tolerance": 1.4788424634584669e-12
+      }
     },
     {
       "step": 8,
@@ -281,7 +347,14 @@
       "price": 0.004344740905553206,
       "update_batch_loss": 1.0890857192028018,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7184584501263901,
+        "chosen_priced_score": 0.7184584501263901,
+        "priced_gap": 0.0,
+        "tolerance": 7.194584501263901e-13
+      }
     },
     {
       "step": 9,
@@ -295,7 +368,14 @@
       "price": 0.002996939959877398,
       "update_batch_loss": 1.4199053554937464,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4839245173621493,
+        "chosen_priced_score": 0.4839245173621493,
+        "priced_gap": 0.0,
+        "tolerance": 4.849245173621493e-13
+      }
     },
     {
       "step": 10,
@@ -309,7 +389,14 @@
       "price": 0.0013704758124371984,
       "update_batch_loss": 1.3500488222727716,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2552869252926452,
+        "chosen_priced_score": 0.2552869252926452,
+        "priced_gap": 0.0,
+        "tolerance": 2.562869252926452e-13
+      }
     },
     {
       "step": 11,
@@ -323,7 +410,14 @@
       "price": 0.0009547564672379908,
       "update_batch_loss": 0.9940711019453099,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.101557465560468,
+        "chosen_priced_score": 1.101557465560468,
+        "priced_gap": 0.0,
+        "tolerance": 1.1025574655604681e-12
+      }
     },
     {
       "step": 12,
@@ -337,7 +431,14 @@
       "price": 0.000457445277918411,
       "update_batch_loss": 0.9767838473502138,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2263395135672479,
+        "chosen_priced_score": 0.2263395135672479,
+        "priced_gap": 0.0,
+        "tolerance": 2.273395135672479e-13
+      }
     },
     {
       "step": 13,
@@ -351,7 +452,14 @@
       "price": 0.00020267878966459798,
       "update_batch_loss": 0.8424870687453183,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0061495720825079,
+        "chosen_priced_score": 0.0061495720825079,
+        "priced_gap": 0.0,
+        "tolerance": 7.1495720825079e-15
+      }
     },
     {
       "step": 14,
@@ -365,7 +473,14 @@
       "price": 3.4344641202955804e-19,
       "update_batch_loss": 0.9255321391808065,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.11721432461761802,
+        "chosen_priced_score": 0.11721432461761802,
+        "priced_gap": 0.0,
+        "tolerance": 1.1821432461761802e-13
+      }
     },
     {
       "step": 15,
@@ -379,7 +494,14 @@
       "price": 0.0009131458014697164,
       "update_batch_loss": 1.004356241149854,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.30818546256011087,
+        "chosen_priced_score": 0.30818546256011087,
+        "priced_gap": 0.0,
+        "tolerance": 3.0918546256011087e-13
+      }
     },
     {
       "step": 16,
@@ -393,7 +515,14 @@
       "price": 0.000389281481570372,
       "update_batch_loss": 1.0484981902391743,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3296164418965039,
+        "chosen_priced_score": 0.3296164418965039,
+        "priced_gap": 0.0,
+        "tolerance": 3.306164418965039e-13
+      }
     },
     {
       "step": 17,
@@ -407,7 +536,14 @@
       "price": 0.0003733736278894368,
       "update_batch_loss": 1.1158480171089948,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.011759104025486371,
+        "chosen_priced_score": -0.011759104025486371,
+        "priced_gap": 0.0,
+        "tolerance": 1.2759104025486371e-14
+      }
     },
     {
       "step": 18,
@@ -421,7 +557,14 @@
       "price": 1.064633830997391e-18,
       "update_batch_loss": 0.8820227998456603,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0766461358189479,
+        "chosen_priced_score": 1.0766461358189479,
+        "priced_gap": 0.0,
+        "tolerance": 1.077646135818948e-12
+      }
     },
     {
       "step": 19,
@@ -435,7 +578,14 @@
       "price": 0.001231142214889425,
       "update_batch_loss": 0.6787744004544067,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.01537806448147571,
+        "chosen_priced_score": 0.01537806448147571,
+        "priced_gap": 0.0,
+        "tolerance": 1.637806448147571e-14
+      }
     },
     {
       "step": 20,
@@ -449,7 +599,14 @@
       "price": 0.0004141912532009343,
       "update_batch_loss": 1.0853590276077356,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.10667909198648043,
+        "chosen_priced_score": 0.10667909198648043,
+        "priced_gap": 0.0,
+        "tolerance": 1.0767909198648043e-13
+      }
     },
     {
       "step": 21,
@@ -463,7 +620,14 @@
       "price": 4.785129072238598e-19,
       "update_batch_loss": 0.8615617381061492,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.06186556148605344,
+        "chosen_priced_score": 0.06186556148605344,
+        "priced_gap": 0.0,
+        "tolerance": 6.286556148605344e-14
+      }
     },
     {
       "step": 22,
@@ -477,7 +641,14 @@
       "price": 0.0003147397949533172,
       "update_batch_loss": 1.0345529229591186,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3121130832371318,
+        "chosen_priced_score": 0.3121130832371318,
+        "priced_gap": 0.0,
+        "tolerance": 3.131130832371318e-13
+      }
     },
     {
       "step": 23,
@@ -491,7 +662,14 @@
       "price": 0.0006303667948200753,
       "update_batch_loss": 0.8587021153691654,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6882767040423052,
+        "chosen_priced_score": 0.6882767040423052,
+        "priced_gap": 0.0,
+        "tolerance": 6.892767040423052e-13
+      }
     },
     {
       "step": 24,
@@ -505,7 +683,14 @@
       "price": 0.0007622645785647391,
       "update_batch_loss": 0.8569628816802548,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13870171825592958,
+        "chosen_priced_score": 0.13870171825592958,
+        "priced_gap": 0.0,
+        "tolerance": 1.3970171825592958e-13
+      }
     },
     {
       "step": 25,
@@ -519,7 +704,14 @@
       "price": 0.002726537702471417,
       "update_batch_loss": 1.029792151675553,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 9.186269922596937,
+        "chosen_priced_score": 9.186269922596937,
+        "priced_gap": 0.0,
+        "tolerance": 9.187269922596938e-12
+      }
     },
     {
       "step": 26,
@@ -533,7 +725,14 @@
       "price": 0.0021140355696874337,
       "update_batch_loss": 0.8104256156967191,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6619104688784627,
+        "chosen_priced_score": 0.6619104688784627,
+        "priced_gap": 0.0,
+        "tolerance": 6.629104688784627e-13
+      }
     },
     {
       "step": 27,
@@ -547,7 +746,14 @@
       "price": 0.0012289461998738493,
       "update_batch_loss": 0.7228415120276077,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1249312985822931,
+        "chosen_priced_score": 0.1249312985822931,
+        "priced_gap": 0.0,
+        "tolerance": 1.259312985822931e-13
+      }
     },
     {
       "step": 28,
@@ -561,7 +767,14 @@
       "price": 0.0008354572903104304,
       "update_batch_loss": 1.0130553532965576,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0380815606844112,
+        "chosen_priced_score": 1.0380815606844112,
+        "priced_gap": 0.0,
+        "tolerance": 1.0390815606844112e-12
+      }
     },
     {
       "step": 29,
@@ -575,7 +788,14 @@
       "price": 0.0006410095399664621,
       "update_batch_loss": 0.9120313247496095,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1868454731296192,
+        "chosen_priced_score": 0.1868454731296192,
+        "priced_gap": 0.0,
+        "tolerance": 1.878454731296192e-13
+      }
     },
     {
       "step": 30,
@@ -589,7 +809,14 @@
       "price": 0.0013301632463008327,
       "update_batch_loss": 0.8242368691319217,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8015097817441771,
+        "chosen_priced_score": 0.8015097817441771,
+        "priced_gap": 0.0,
+        "tolerance": 8.025097817441771e-13
+      }
     },
     {
       "step": 31,
@@ -603,7 +830,14 @@
       "price": 0.0006962917812510928,
       "update_batch_loss": 0.8731130945418933,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0759796143528354,
+        "chosen_priced_score": 0.0759796143528354,
+        "priced_gap": 0.0,
+        "tolerance": 7.697961435283539e-14
+      }
     },
     {
       "step": 32,
@@ -617,7 +851,14 @@
       "price": 0.0010488936903816958,
       "update_batch_loss": 0.7461329455758368,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.18645016875129078,
+        "chosen_priced_score": 0.18645016875129078,
+        "priced_gap": 0.0,
+        "tolerance": 1.8745016875129077e-13
+      }
     },
     {
       "step": 33,
@@ -631,7 +872,14 @@
       "price": 0.0003165360019699101,
       "update_batch_loss": 0.8356343738517639,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13672129560935004,
+        "chosen_priced_score": 0.13672129560935004,
+        "priced_gap": 0.0,
+        "tolerance": 1.3772129560935003e-13
+      }
     },
     {
       "step": 34,
@@ -645,7 +893,14 @@
       "price": 0.00019656798075156468,
       "update_batch_loss": 0.7606308193988717,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.24079700974700866,
+        "chosen_priced_score": 0.24079700974700866,
+        "priced_gap": 0.0,
+        "tolerance": 2.4179700974700866e-13
+      }
     },
     {
       "step": 35,
@@ -659,7 +914,14 @@
       "price": 0.00024320687484844376,
       "update_batch_loss": 0.8284012169066028,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3920736947351448,
+        "chosen_priced_score": 0.3920736947351448,
+        "priced_gap": 0.0,
+        "tolerance": 3.930736947351448e-13
+      }
     },
     {
       "step": 36,
@@ -673,7 +935,14 @@
       "price": 0.00018008214427195728,
       "update_batch_loss": 0.6377502470876083,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.0056421202767773055,
+        "chosen_priced_score": -0.0056421202767773055,
+        "priced_gap": 0.0,
+        "tolerance": 6.642120276777305e-15
+      }
     },
     {
       "step": 37,
@@ -687,7 +956,14 @@
       "price": 3.8024056776953446e-19,
       "update_batch_loss": 0.8648972708457886,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 512
+      "line_search_forward_examples": 512,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.09907871445055717,
+        "chosen_priced_score": 0.09907871445055717,
+        "priced_gap": 0.0,
+        "tolerance": 1.0007871445055717e-13
+      }
     },
     {
       "step": 38,
@@ -701,7 +977,14 @@
       "price": 0.0011977026520671394,
       "update_batch_loss": 0.7932729805139225,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 512
+      "line_search_forward_examples": 512,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.9887635493926951,
+        "chosen_priced_score": 0.9887635493926951,
+        "priced_gap": 0.0,
+        "tolerance": 9.897635493926952e-13
+      }
     },
     {
       "step": 39,
@@ -715,7 +998,14 @@
       "price": 0.00020951157383498653,
       "update_batch_loss": 0.9369363139492508,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.03445026873581358,
+        "chosen_priced_score": 0.03445026873581358,
+        "priced_gap": 0.0,
+        "tolerance": 3.5450268735813586e-14
+      }
     },
     {
       "step": 40,
@@ -729,7 +1019,14 @@
       "price": 0.00040994408947853426,
       "update_batch_loss": 0.8894929850931887,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.32745649702311586,
+        "chosen_priced_score": 0.32745649702311586,
+        "priced_gap": 0.0,
+        "tolerance": 3.2845649702311586e-13
+      }
     },
     {
       "step": 41,
@@ -743,7 +1040,14 @@
       "price": 0.0005354283161722532,
       "update_batch_loss": 0.6217021388630122,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.27702764556582893,
+        "chosen_priced_score": 0.27702764556582893,
+        "priced_gap": 0.0,
+        "tolerance": 2.7802764556582894e-13
+      }
     },
     {
       "step": 42,
@@ -757,7 +1061,14 @@
       "price": 0.0011252019130517028,
       "update_batch_loss": 1.0366485942727381,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07115104194865363,
+        "chosen_priced_score": 0.07115104194865363,
+        "priced_gap": 0.0,
+        "tolerance": 7.215104194865363e-14
+      }
     },
     {
       "step": 43,
@@ -771,7 +1082,14 @@
       "price": 0.0004808142311904619,
       "update_batch_loss": 0.9038569544333388,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.052836820238738876,
+        "chosen_priced_score": 0.052836820238738876,
+        "priced_gap": 0.0,
+        "tolerance": 5.3836820238738875e-14
+      }
     },
     {
       "step": 44,
@@ -785,7 +1103,14 @@
       "price": 0.0007095764705010303,
       "update_batch_loss": 0.8112512831995294,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.6335860250949326,
+        "chosen_priced_score": 1.6335860250949326,
+        "priced_gap": 0.0,
+        "tolerance": 1.6345860250949326e-12
+      }
     },
     {
       "step": 45,
@@ -799,7 +1124,14 @@
       "price": 0.0006849322351789895,
       "update_batch_loss": 0.6313558774270063,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2660996267810562,
+        "chosen_priced_score": 0.2660996267810562,
+        "priced_gap": 0.0,
+        "tolerance": 2.670996267810562e-13
+      }
     },
     {
       "step": 46,
@@ -813,7 +1145,14 @@
       "price": 0.00044306906927977493,
       "update_batch_loss": 0.7090783826087583,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1220537206134295,
+        "chosen_priced_score": 0.1220537206134295,
+        "priced_gap": 0.0,
+        "tolerance": 1.230537206134295e-13
+      }
     },
     {
       "step": 47,
@@ -827,7 +1166,14 @@
       "price": 0.000963931980223792,
       "update_batch_loss": 0.7898038607828448,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0238751396129038,
+        "chosen_priced_score": 1.0238751396129038,
+        "priced_gap": 0.0,
+        "tolerance": 1.0248751396129038e-12
+      }
     },
     {
       "step": 48,
@@ -841,7 +1187,14 @@
       "price": 0.0011114340285577273,
       "update_batch_loss": 0.5978735905261272,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 448
+      "line_search_forward_examples": 448,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.08939569417738935,
+        "chosen_priced_score": 0.08939569417738935,
+        "priced_gap": 0.0,
+        "tolerance": 9.039569417738935e-14
+      }
     },
     {
       "step": 49,
@@ -855,7 +1208,14 @@
       "price": 0.0007017814954134899,
       "update_batch_loss": 0.576453408745305,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.021048139643965402,
+        "chosen_priced_score": -0.021048139643965402,
+        "priced_gap": 0.0,
+        "tolerance": 2.20481396439654e-14
+      }
     },
     {
       "step": 50,
@@ -869,7 +1229,14 @@
       "price": 0.0016866352245099388,
       "update_batch_loss": 0.6862912759050923,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 448
+      "line_search_forward_examples": 448,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0617576458607945,
+        "chosen_priced_score": 1.0617576458607945,
+        "priced_gap": 0.0,
+        "tolerance": 1.0627576458607945e-12
+      }
     },
     {
       "step": 51,
@@ -883,7 +1250,14 @@
       "price": 0.003069022210853163,
       "update_batch_loss": 1.048348232013124,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.5897034907334398,
+        "chosen_priced_score": 1.5897034907334398,
+        "priced_gap": 0.0,
+        "tolerance": 1.5907034907334398e-12
+      }
     },
     {
       "step": 52,
@@ -897,7 +1271,14 @@
       "price": 0.001884078554007989,
       "update_batch_loss": 0.7000983502421024,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.062299149339329,
+        "chosen_priced_score": 1.062299149339329,
+        "priced_gap": 0.0,
+        "tolerance": 1.0632991493393291e-12
+      }
     },
     {
       "step": 53,
@@ -911,7 +1292,14 @@
       "price": 0.0019050026017228146,
       "update_batch_loss": 0.8631827501543045,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8881518081501026,
+        "chosen_priced_score": 0.8881518081501026,
+        "priced_gap": 0.0,
+        "tolerance": 8.891518081501027e-13
+      }
     },
     {
       "step": 54,
@@ -925,7 +1313,14 @@
       "price": 0.0023039922035590086,
       "update_batch_loss": 0.6951925707786032,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.087664814627866,
+        "chosen_priced_score": 2.087664814627866,
+        "priced_gap": 0.0,
+        "tolerance": 2.088664814627866e-12
+      }
     },
     {
       "step": 55,
@@ -939,7 +1334,14 @@
       "price": 0.0004034800915539222,
       "update_batch_loss": 0.7172376487319172,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.06390270013496688,
+        "chosen_priced_score": 0.06390270013496688,
+        "priced_gap": 0.0,
+        "tolerance": 6.490270013496687e-14
+      }
     },
     {
       "step": 56,
@@ -953,7 +1355,14 @@
       "price": 0.0004147942269248294,
       "update_batch_loss": 0.8243608824786736,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13059412742827742,
+        "chosen_priced_score": 0.13059412742827742,
+        "priced_gap": 0.0,
+        "tolerance": 1.315941274282774e-13
+      }
     },
     {
       "step": 57,
@@ -967,7 +1376,14 @@
       "price": 0.0005688573939151549,
       "update_batch_loss": 0.7561549160667677,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.772891067188493,
+        "chosen_priced_score": 0.772891067188493,
+        "priced_gap": 0.0,
+        "tolerance": 7.73891067188493e-13
+      }
     },
     {
       "step": 58,
@@ -981,7 +1397,14 @@
       "price": 0.001677111764572202,
       "update_batch_loss": 0.8501232446717791,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.02851678191029499,
+        "chosen_priced_score": -0.02851678191029499,
+        "priced_gap": 0.0,
+        "tolerance": 2.9516781910294993e-14
+      }
     },
     {
       "step": 59,
@@ -995,7 +1418,14 @@
       "price": 0.0006275063376916187,
       "update_batch_loss": 0.8197730705906816,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.12490916868352918,
+        "chosen_priced_score": 0.12490916868352918,
+        "priced_gap": 0.0,
+        "tolerance": 1.2590916868352918e-13
+      }
     },
     {
       "step": 60,
@@ -1009,7 +1439,14 @@
       "price": 0.0006244337218403882,
       "update_batch_loss": 0.668225331197094,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4571115909197496,
+        "chosen_priced_score": 0.4571115909197496,
+        "priced_gap": 0.0,
+        "tolerance": 4.581115909197496e-13
+      }
     },
     {
       "step": 61,
@@ -1023,7 +1460,14 @@
       "price": 0.0005493915932237531,
       "update_batch_loss": 0.8786716542385817,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.10652635459301696,
+        "chosen_priced_score": 0.10652635459301696,
+        "priced_gap": 0.0,
+        "tolerance": 1.0752635459301696e-13
+      }
     },
     {
       "step": 62,
@@ -1037,7 +1481,14 @@
       "price": 0.0004918544248304851,
       "update_batch_loss": 0.6411436934877275,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.43995537528795325,
+        "chosen_priced_score": 0.43995537528795325,
+        "priced_gap": 0.0,
+        "tolerance": 4.4095537528795324e-13
+      }
     },
     {
       "step": 63,
@@ -1051,7 +1502,14 @@
       "price": 0.001300601140494447,
       "update_batch_loss": 0.9551700191173047,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.17163313568752253,
+        "chosen_priced_score": 0.17163313568752253,
+        "priced_gap": 0.0,
+        "tolerance": 1.7263313568752254e-13
+      }
     },
     {
       "step": 64,
@@ -1065,7 +1523,14 @@
       "price": 0.000887970202954796,
       "update_batch_loss": 0.6027063823679641,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07362888862815638,
+        "chosen_priced_score": 0.07362888862815638,
+        "priced_gap": 0.0,
+        "tolerance": 7.462888862815637e-14
+      }
     },
     {
       "step": 65,
@@ -1079,7 +1544,14 @@
       "price": 0.0009424961808078428,
       "update_batch_loss": 0.8325065813014112,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5767380104296147,
+        "chosen_priced_score": 0.5767380104296147,
+        "priced_gap": 0.0,
+        "tolerance": 5.777380104296147e-13
+      }
     },
     {
       "step": 66,
@@ -1093,7 +1565,14 @@
       "price": 0.0011766040330073839,
       "update_batch_loss": 0.6961353844631017,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.04449428889675756,
+        "chosen_priced_score": 0.04449428889675756,
+        "priced_gap": 0.0,
+        "tolerance": 4.549428889675756e-14
+      }
     },
     {
       "step": 67,
@@ -1107,7 +1586,14 @@
       "price": 0.000601468589902604,
       "update_batch_loss": 0.647204640629769,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.443086693856722,
+        "chosen_priced_score": 0.443086693856722,
+        "priced_gap": 0.0,
+        "tolerance": 4.44086693856722e-13
+      }
     },
     {
       "step": 68,
@@ -1121,7 +1607,14 @@
       "price": 0.00015946784702962794,
       "update_batch_loss": 0.5750933100956166,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.01497617272396961,
+        "chosen_priced_score": 0.01497617272396961,
+        "priced_gap": 0.0,
+        "tolerance": 1.5976172723969608e-14
+      }
     },
     {
       "step": 69,
@@ -1135,7 +1628,14 @@
       "price": 0.00019702403082375763,
       "update_batch_loss": 0.7081415328122697,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.29597202348928897,
+        "chosen_priced_score": 0.29597202348928897,
+        "priced_gap": 0.0,
+        "tolerance": 2.9697202348928896e-13
+      }
     },
     {
       "step": 70,
@@ -1149,7 +1649,14 @@
       "price": 0.0005343546792966372,
       "update_batch_loss": 0.6180579857306787,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.021781153681534184,
+        "chosen_priced_score": 0.021781153681534184,
+        "priced_gap": 0.0,
+        "tolerance": 2.2781153681534182e-14
+      }
     },
     {
       "step": 71,
@@ -1163,7 +1670,14 @@
       "price": 0.0006895652979648369,
       "update_batch_loss": 0.8782438141275613,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.44956210360233884,
+        "chosen_priced_score": 0.44956210360233884,
+        "priced_gap": 0.0,
+        "tolerance": 4.505621036023388e-13
+      }
     },
     {
       "step": 72,
@@ -1177,7 +1691,14 @@
       "price": 0.0006516679843636663,
       "update_batch_loss": 0.6510135596184792,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.21109035672064977,
+        "chosen_priced_score": 0.21109035672064977,
+        "priced_gap": 0.0,
+        "tolerance": 2.1209035672064975e-13
+      }
     },
     {
       "step": 73,
@@ -1191,7 +1712,14 @@
       "price": 0.0015112527358995278,
       "update_batch_loss": 0.612061933731874,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1390812902017247,
+        "chosen_priced_score": 1.1390812902017247,
+        "priced_gap": 0.0,
+        "tolerance": 1.1400812902017248e-12
+      }
     },
     {
       "step": 74,
@@ -1205,7 +1733,14 @@
       "price": 0.001016252965280365,
       "update_batch_loss": 0.7824532609397976,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1093108796686422,
+        "chosen_priced_score": 1.1093108796686422,
+        "priced_gap": 0.0,
+        "tolerance": 1.1103108796686422e-12
+      }
     },
     {
       "step": 75,
@@ -1219,7 +1754,14 @@
       "price": 0.0007168754257916105,
       "update_batch_loss": 0.8285156174777075,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.35592534147490146,
+        "chosen_priced_score": 0.35592534147490146,
+        "priced_gap": 0.0,
+        "tolerance": 3.5692534147490143e-13
+      }
     },
     {
       "step": 76,
@@ -1233,7 +1775,14 @@
       "price": 0.002212146526563588,
       "update_batch_loss": 0.8372931565101788,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4801174971476267,
+        "chosen_priced_score": 1.4801174971476267,
+        "priced_gap": 0.0,
+        "tolerance": 1.4811174971476268e-12
+      }
     },
     {
       "step": 77,
@@ -1247,7 +1796,14 @@
       "price": 0.001057206698387221,
       "update_batch_loss": 0.6104111703056019,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.016164023016698555,
+        "chosen_priced_score": -0.016164023016698555,
+        "priced_gap": 0.0,
+        "tolerance": 1.7164023016698555e-14
+      }
     },
     {
       "step": 78,
@@ -1261,7 +1817,14 @@
       "price": 0.0008114408974276361,
       "update_batch_loss": 0.8143736536337631,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3149899255290547,
+        "chosen_priced_score": 0.3149899255290547,
+        "priced_gap": 0.0,
+        "tolerance": 3.1598992552905466e-13
+      }
     },
     {
       "step": 79,
@@ -1275,7 +1838,14 @@
       "price": 0.0009404365712796915,
       "update_batch_loss": 0.7150456779959651,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.04180853135602635,
+        "chosen_priced_score": 0.04180853135602635,
+        "priced_gap": 0.0,
+        "tolerance": 4.280853135602635e-14
+      }
     },
     {
       "step": 80,
@@ -1289,7 +1859,14 @@
       "price": 0.00031665095075694564,
       "update_batch_loss": 0.5617360035740375,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.18493879595664528,
+        "chosen_priced_score": 0.18493879595664528,
+        "priced_gap": 0.0,
+        "tolerance": 1.8593879595664527e-13
+      }
     },
     {
       "step": 81,
@@ -1303,7 +1880,14 @@
       "price": 0.0008663094779542749,
       "update_batch_loss": 0.6884489906606361,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7657735611452293,
+        "chosen_priced_score": 0.7657735611452293,
+        "priced_gap": 0.0,
+        "tolerance": 7.667735611452293e-13
+      }
     },
     {
       "step": 82,
@@ -1317,7 +1901,14 @@
       "price": 0.0014651469976709513,
       "update_batch_loss": 0.5295148885407043,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.059662512178611064,
+        "chosen_priced_score": 0.059662512178611064,
+        "priced_gap": 0.0,
+        "tolerance": 6.066251217861106e-14
+      }
     },
     {
       "step": 83,
@@ -1331,7 +1922,14 @@
       "price": 0.0007168469976297138,
       "update_batch_loss": 0.6620955417559963,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.011205111477326023,
+        "chosen_priced_score": 0.011205111477326023,
+        "priced_gap": 0.0,
+        "tolerance": 1.2205111477326022e-14
+      }
     },
     {
       "step": 84,
@@ -1345,7 +1943,14 @@
       "price": 0.000653140236380776,
       "update_batch_loss": 0.7899360849014238,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13154132776304317,
+        "chosen_priced_score": 0.13154132776304317,
+        "priced_gap": 0.0,
+        "tolerance": 1.3254132776304317e-13
+      }
     },
     {
       "step": 85,
@@ -1359,7 +1964,14 @@
       "price": 0.0010533592122599768,
       "update_batch_loss": 0.5651866909669918,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1482549084222018,
+        "chosen_priced_score": 1.1482549084222018,
+        "priced_gap": 0.0,
+        "tolerance": 1.149254908422202e-12
+      }
     },
     {
       "step": 86,
@@ -1373,7 +1985,14 @@
       "price": 0.0007785618097855258,
       "update_batch_loss": 0.6742113957027709,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0380300546710561,
+        "chosen_priced_score": 1.0380300546710561,
+        "priced_gap": 0.0,
+        "tolerance": 1.0390300546710563e-12
+      }
     },
     {
       "step": 87,
@@ -1387,7 +2006,14 @@
       "price": 0.0005809067610008873,
       "update_batch_loss": 0.49996541970756003,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.029320958289767295,
+        "chosen_priced_score": 0.029320958289767295,
+        "priced_gap": 0.0,
+        "tolerance": 3.03209582897673e-14
+      }
     },
     {
       "step": 88,
@@ -1401,7 +2027,14 @@
       "price": 0.0009016009563714278,
       "update_batch_loss": 0.7396883665864061,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13255152721350646,
+        "chosen_priced_score": 0.13255152721350646,
+        "priced_gap": 0.0,
+        "tolerance": 1.3355152721350646e-13
+      }
     },
     {
       "step": 89,
@@ -1415,7 +2048,14 @@
       "price": 0.0004771208793870956,
       "update_batch_loss": 0.7848549995050795,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.01526786814038706,
+        "chosen_priced_score": -0.01526786814038706,
+        "priced_gap": 0.0,
+        "tolerance": 1.6267868140387058e-14
+      }
     },
     {
       "step": 90,
@@ -1429,7 +2069,14 @@
       "price": 0.0004444530185436687,
       "update_batch_loss": 0.7342362145670542,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.2333823550540515,
+        "chosen_priced_score": 1.2333823550540515,
+        "priced_gap": 0.0,
+        "tolerance": 1.2343823550540515e-12
+      }
     },
     {
       "step": 91,
@@ -1443,7 +2090,14 @@
       "price": 0.0005413614657019107,
       "update_batch_loss": 0.6179499413787548,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.029809726996153512,
+        "chosen_priced_score": 0.029809726996153512,
+        "priced_gap": 0.0,
+        "tolerance": 3.0809726996153516e-14
+      }
     },
     {
       "step": 92,
@@ -1457,7 +2111,14 @@
       "price": 0.0003744502247594767,
       "update_batch_loss": 0.6069004736551274,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.22961264122933311,
+        "chosen_priced_score": 0.22961264122933311,
+        "priced_gap": 0.0,
+        "tolerance": 2.306126412293331e-13
+      }
     },
     {
       "step": 93,
@@ -1471,7 +2132,14 @@
       "price": 0.00032080300889197324,
       "update_batch_loss": 0.7270788706406786,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.11656589711169699,
+        "chosen_priced_score": 0.11656589711169699,
+        "priced_gap": 0.0,
+        "tolerance": 1.1756589711169697e-13
+      }
     },
     {
       "step": 94,
@@ -1485,7 +2153,14 @@
       "price": 0.0007319120710626605,
       "update_batch_loss": 0.623492769999653,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.32831148602449056,
+        "chosen_priced_score": 0.32831148602449056,
+        "priced_gap": 0.0,
+        "tolerance": 3.2931148602449057e-13
+      }
     },
     {
       "step": 95,
@@ -1499,7 +2174,14 @@
       "price": 0.00046293785686787967,
       "update_batch_loss": 0.5920959986379709,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.18668904945391554,
+        "chosen_priced_score": 0.18668904945391554,
+        "priced_gap": 0.0,
+        "tolerance": 1.8768904945391553e-13
+      }
     },
     {
       "step": 96,
@@ -1513,7 +2195,14 @@
       "price": 0.0003373228917701208,
       "update_batch_loss": 0.5270258901977065,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.257494105435192,
+        "chosen_priced_score": 0.257494105435192,
+        "priced_gap": 0.0,
+        "tolerance": 2.58494105435192e-13
+      }
     },
     {
       "step": 97,
@@ -1527,7 +2216,14 @@
       "price": 0.0019500631540739603,
       "update_batch_loss": 0.6679912869033039,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.30518645245068676,
+        "chosen_priced_score": 0.30518645245068676,
+        "priced_gap": 0.0,
+        "tolerance": 3.0618645245068675e-13
+      }
     },
     {
       "step": 98,
@@ -1541,7 +2237,14 @@
       "price": 0.0010181338624784978,
       "update_batch_loss": 0.4973634153968719,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.02507644381138441,
+        "chosen_priced_score": -0.02507644381138441,
+        "priced_gap": 0.0,
+        "tolerance": 2.607644381138441e-14
+      }
     },
     {
       "step": 99,
@@ -1555,7 +2258,14 @@
       "price": 0.0009445224753311331,
       "update_batch_loss": 0.5950895746968182,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6955635865535994,
+        "chosen_priced_score": 0.6955635865535994,
+        "priced_gap": 0.0,
+        "tolerance": 6.965635865535994e-13
+      }
     },
     {
       "step": 100,
@@ -1569,7 +2279,14 @@
       "price": 0.0012214881471156785,
       "update_batch_loss": 0.5458869511595018,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.20572664949996672,
+        "chosen_priced_score": 0.20572664949996672,
+        "priced_gap": 0.0,
+        "tolerance": 2.067266494999667e-13
+      }
     },
     {
       "step": 101,
@@ -1583,7 +2300,14 @@
       "price": 0.0009154967623675012,
       "update_batch_loss": 0.7105930593835854,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 512
+      "line_search_forward_examples": 512,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07801925078863699,
+        "chosen_priced_score": 0.07801925078863699,
+        "priced_gap": 0.0,
+        "tolerance": 7.901925078863698e-14
+      }
     },
     {
       "step": 102,
@@ -1597,7 +2321,14 @@
       "price": 0.003136729116778827,
       "update_batch_loss": 0.6442373139400213,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.194278547701494,
+        "chosen_priced_score": 2.194278547701494,
+        "priced_gap": 0.0,
+        "tolerance": 2.195278547701494e-12
+      }
     },
     {
       "step": 103,
@@ -1611,7 +2342,14 @@
       "price": 0.003285530609769985,
       "update_batch_loss": 0.5781673164156154,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.736107603865131,
+        "chosen_priced_score": 0.736107603865131,
+        "priced_gap": 0.0,
+        "tolerance": 7.37107603865131e-13
+      }
     },
     {
       "step": 104,
@@ -1625,7 +2363,14 @@
       "price": 0.0008490394361781602,
       "update_batch_loss": 0.7261031402748022,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.08902430790509853,
+        "chosen_priced_score": 0.08902430790509853,
+        "priced_gap": 0.0,
+        "tolerance": 9.002430790509853e-14
+      }
     },
     {
       "step": 105,
@@ -1639,7 +2384,14 @@
       "price": 0.001349496829934924,
       "update_batch_loss": 0.6136266380245432,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3662070173300027,
+        "chosen_priced_score": 0.3662070173300027,
+        "priced_gap": 0.0,
+        "tolerance": 3.672070173300027e-13
+      }
     },
     {
       "step": 106,
@@ -1653,7 +2405,14 @@
       "price": 0.002024842534504154,
       "update_batch_loss": 0.8104863772660619,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.20725748368336538,
+        "chosen_priced_score": 0.20725748368336538,
+        "priced_gap": 0.0,
+        "tolerance": 2.0825748368336538e-13
+      }
     },
     {
       "step": 107,
@@ -1667,7 +2426,14 @@
       "price": 0.0008385607762025076,
       "update_batch_loss": 0.6622395815237561,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1576611205654031,
+        "chosen_priced_score": 0.1576611205654031,
+        "priced_gap": 0.0,
+        "tolerance": 1.586611205654031e-13
+      }
     },
     {
       "step": 108,
@@ -1681,7 +2447,14 @@
       "price": 0.003309594282976018,
       "update_batch_loss": 0.6691372120642147,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4023824113297136,
+        "chosen_priced_score": 1.4023824113297136,
+        "priced_gap": 0.0,
+        "tolerance": 1.4033824113297137e-12
+      }
     },
     {
       "step": 109,
@@ -1695,7 +2468,14 @@
       "price": 0.000573630149272866,
       "update_batch_loss": 0.6520695462602011,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7272563778746569,
+        "chosen_priced_score": 0.7272563778746569,
+        "priced_gap": 0.0,
+        "tolerance": 7.282563778746569e-13
+      }
     },
     {
       "step": 110,
@@ -1709,7 +2489,14 @@
       "price": 0.001025100334601286,
       "update_batch_loss": 0.6357400800390953,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.032803210707241154,
+        "chosen_priced_score": -0.032803210707241154,
+        "priced_gap": 0.0,
+        "tolerance": 3.3803210707241154e-14
+      }
     },
     {
       "step": 111,
@@ -1723,7 +2510,14 @@
       "price": 0.000606465805844982,
       "update_batch_loss": 0.48991313742698617,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.019406905787039425,
+        "chosen_priced_score": -0.019406905787039425,
+        "priced_gap": 0.0,
+        "tolerance": 2.0406905787039422e-14
+      }
     },
     {
       "step": 112,
@@ -1737,7 +2531,14 @@
       "price": 0.0007197717157702755,
       "update_batch_loss": 0.6074126163758853,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.023032694904648817,
+        "chosen_priced_score": -0.023032694904648817,
+        "priced_gap": 0.0,
+        "tolerance": 2.4032694904648814e-14
+      }
     },
     {
       "step": 113,
@@ -1751,7 +2552,14 @@
       "price": 0.0,
       "update_batch_loss": 0.6802552248156577,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.38565158702366287,
+        "chosen_priced_score": 0.38565158702366287,
+        "priced_gap": 0.0,
+        "tolerance": 3.8665158702366285e-13
+      }
     },
     {
       "step": 114,
@@ -1765,7 +2573,14 @@
       "price": 0.00029690768297519453,
       "update_batch_loss": 0.6849125310549885,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.12940292848430748,
+        "chosen_priced_score": 0.12940292848430748,
+        "priced_gap": 0.0,
+        "tolerance": 1.3040292848430747e-13
+      }
     },
     {
       "step": 115,
@@ -1779,7 +2594,14 @@
       "price": 0.00023168171276966983,
       "update_batch_loss": 0.6712467056796181,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.007413814808629435,
+        "chosen_priced_score": -0.007413814808629435,
+        "priced_gap": 0.0,
+        "tolerance": 8.413814808629435e-15
+      }
     },
     {
       "step": 116,
@@ -1793,7 +2615,14 @@
       "price": 0.00043139567095399066,
       "update_batch_loss": 0.6828456787109872,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.26264720245788864,
+        "chosen_priced_score": 0.26264720245788864,
+        "priced_gap": 0.0,
+        "tolerance": 2.636472024578886e-13
+      }
     },
     {
       "step": 117,
@@ -1807,7 +2636,14 @@
       "price": 0.00028102492823017854,
       "update_batch_loss": 0.8995891344363304,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.008992797703365713,
+        "chosen_priced_score": -0.008992797703365713,
+        "priced_gap": 0.0,
+        "tolerance": 9.992797703365713e-15
+      }
     },
     {
       "step": 118,
@@ -1821,7 +2657,14 @@
       "price": 0.0,
       "update_batch_loss": 0.6280872721861104,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3021726173926386,
+        "chosen_priced_score": 0.3021726173926386,
+        "priced_gap": 0.0,
+        "tolerance": 3.0317261739263863e-13
+      }
     },
     {
       "step": 119,
@@ -1835,7 +2678,14 @@
       "price": 0.0004235493804123698,
       "update_batch_loss": 0.5216133506928965,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.019743229061117876,
+        "chosen_priced_score": 0.019743229061117876,
+        "priced_gap": 0.0,
+        "tolerance": 2.0743229061117874e-14
+      }
     },
     {
       "step": 120,
@@ -1849,7 +2699,14 @@
       "price": 0.0004373514428031128,
       "update_batch_loss": 0.8878267105843077,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 9.470906669669862e-05,
+        "chosen_priced_score": 9.470906669669862e-05,
+        "priced_gap": 0.0,
+        "tolerance": 1.0947090666966988e-15
+      }
     },
     {
       "step": 121,
@@ -1863,7 +2720,14 @@
       "price": 0.0,
       "update_batch_loss": 0.7320481815297973,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.03961130013649353,
+        "chosen_priced_score": 0.03961130013649353,
+        "priced_gap": 0.0,
+        "tolerance": 4.0611300136493525e-14
+      }
     },
     {
       "step": 122,
@@ -1877,7 +2741,14 @@
       "price": 0.0009234071325014047,
       "update_batch_loss": 0.6387178313451767,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0935362005543128,
+        "chosen_priced_score": 1.0935362005543128,
+        "priced_gap": 0.0,
+        "tolerance": 1.094536200554313e-12
+      }
     },
     {
       "step": 123,
@@ -1891,7 +2762,14 @@
       "price": 0.0015659669898897505,
       "update_batch_loss": 0.9554919065968385,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4912227635091665,
+        "chosen_priced_score": 0.4912227635091665,
+        "priced_gap": 0.0,
+        "tolerance": 4.922227635091665e-13
+      }
     },
     {
       "step": 124,
@@ -1905,7 +2783,14 @@
       "price": 0.0009164575492072402,
       "update_batch_loss": 0.5374262115557904,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.13040848613542694,
+        "chosen_priced_score": 0.13040848613542694,
+        "priced_gap": 0.0,
+        "tolerance": 1.3140848613542692e-13
+      }
     },
     {
       "step": 125,
@@ -1919,7 +2804,14 @@
       "price": 0.0010620111999057975,
       "update_batch_loss": 0.6962695555258066,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0701002206595218,
+        "chosen_priced_score": 1.0701002206595218,
+        "priced_gap": 0.0,
+        "tolerance": 1.0711002206595219e-12
+      }
     },
     {
       "step": 126,
@@ -1933,7 +2825,14 @@
       "price": 0.001928953228301571,
       "update_batch_loss": 0.5405648555743605,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.01574786176143679,
+        "chosen_priced_score": -0.01574786176143679,
+        "priced_gap": 0.0,
+        "tolerance": 1.6747861761436788e-14
+      }
     },
     {
       "step": 127,
@@ -1947,7 +2846,14 @@
       "price": 0.0006729381781025553,
       "update_batch_loss": 0.8109143292105516,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.018191634972961813,
+        "chosen_priced_score": -0.018191634972961813,
+        "priced_gap": 0.0,
+        "tolerance": 1.9191634972961812e-14
+      }
     },
     {
       "step": 128,
@@ -1961,7 +2867,14 @@
       "price": 0.0022487819609755566,
       "update_batch_loss": 0.5867446174001969,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.342027824746103,
+        "chosen_priced_score": 1.342027824746103,
+        "priced_gap": 0.0,
+        "tolerance": 1.3430278247461032e-12
+      }
     },
     {
       "step": 129,
@@ -1975,7 +2888,14 @@
       "price": 0.0027131053069628947,
       "update_batch_loss": 0.6699235264001097,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6392572718936093,
+        "chosen_priced_score": 0.6392572718936093,
+        "priced_gap": 0.0,
+        "tolerance": 6.402572718936092e-13
+      }
     },
     {
       "step": 130,
@@ -1989,7 +2909,14 @@
       "price": 0.0010504564373635386,
       "update_batch_loss": 0.9239202006635265,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07704928785035377,
+        "chosen_priced_score": 0.07704928785035377,
+        "priced_gap": 0.0,
+        "tolerance": 7.804928785035376e-14
+      }
     },
     {
       "step": 131,
@@ -2003,7 +2930,14 @@
       "price": 0.001253347743401505,
       "update_batch_loss": 0.6399114726026909,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.025879077795235496,
+        "chosen_priced_score": -0.025879077795235496,
+        "priced_gap": 0.0,
+        "tolerance": 2.6879077795235495e-14
+      }
     },
     {
       "step": 132,
@@ -2017,7 +2951,14 @@
       "price": 0.0005444575242767194,
       "update_batch_loss": 0.6219699306735295,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.005824489086575076,
+        "chosen_priced_score": -0.005824489086575076,
+        "priced_gap": 0.0,
+        "tolerance": 6.824489086575076e-15
+      }
     },
     {
       "step": 133,
@@ -2031,7 +2972,14 @@
       "price": 0.0003280741830043077,
       "update_batch_loss": 0.7665265244381945,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0853188438292003,
+        "chosen_priced_score": 0.0853188438292003,
+        "priced_gap": 0.0,
+        "tolerance": 8.631884382920029e-14
+      }
     },
     {
       "step": 134,
@@ -2045,7 +2993,14 @@
       "price": 0.0001989248942743014,
       "update_batch_loss": 0.963751500323358,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.025797507764500648,
+        "chosen_priced_score": 0.025797507764500648,
+        "priced_gap": 0.0,
+        "tolerance": 2.6797507764500645e-14
+      }
     },
     {
       "step": 135,
@@ -2059,7 +3014,14 @@
       "price": 0.0,
       "update_batch_loss": 0.79705776316958,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.22202349099231555,
+        "chosen_priced_score": 0.22202349099231555,
+        "priced_gap": 0.0,
+        "tolerance": 2.2302349099231554e-13
+      }
     },
     {
       "step": 136,
@@ -2073,7 +3035,14 @@
       "price": 0.0007754959776379072,
       "update_batch_loss": 0.5882955305135429,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.04322635733484725,
+        "chosen_priced_score": 0.04322635733484725,
+        "priced_gap": 0.0,
+        "tolerance": 4.422635733484725e-14
+      }
     },
     {
       "step": 137,
@@ -2087,7 +3056,14 @@
       "price": 5.889475864974623e-05,
       "update_batch_loss": 0.7625056200727204,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.0018846322767918794,
+        "chosen_priced_score": -0.0018846322767918794,
+        "priced_gap": 0.0,
+        "tolerance": 2.8846322767918795e-15
+      }
     },
     {
       "step": 138,
@@ -2101,7 +3077,14 @@
       "price": 0.0,
       "update_batch_loss": 0.5194207757109973,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3534231356085811,
+        "chosen_priced_score": 0.3534231356085811,
+        "priced_gap": 0.0,
+        "tolerance": 3.5442313560858106e-13
+      }
     },
     {
       "step": 139,
@@ -2115,7 +3098,14 @@
       "price": 0.0002873091407104833,
       "update_batch_loss": 0.7451112085200177,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1450076844185364,
+        "chosen_priced_score": 0.1450076844185364,
+        "priced_gap": 0.0,
+        "tolerance": 1.460076844185364e-13
+      }
     },
     {
       "step": 140,
@@ -2129,7 +3119,14 @@
       "price": 0.00040510157108252095,
       "update_batch_loss": 0.6546973750643561,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.01296325027464067,
+        "chosen_priced_score": -0.01296325027464067,
+        "priced_gap": 0.0,
+        "tolerance": 1.3963250274640671e-14
+      }
     },
     {
       "step": 141,
@@ -2143,7 +3140,14 @@
       "price": 0.0003380964852260121,
       "update_batch_loss": 0.62158213625818,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.38577507495822816,
+        "chosen_priced_score": 0.38577507495822816,
+        "priced_gap": 0.0,
+        "tolerance": 3.8677507495822816e-13
+      }
     },
     {
       "step": 142,
@@ -2157,7 +3161,14 @@
       "price": 0.001093336934450638,
       "update_batch_loss": 0.500003037775221,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2594179531953296,
+        "chosen_priced_score": 0.2594179531953296,
+        "priced_gap": 0.0,
+        "tolerance": 2.6041795319532963e-13
+      }
     },
     {
       "step": 143,
@@ -2171,7 +3182,14 @@
       "price": 0.0003344394430925589,
       "update_batch_loss": 0.40608683361708847,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.05999434471651903,
+        "chosen_priced_score": 0.05999434471651903,
+        "priced_gap": 0.0,
+        "tolerance": 6.099434471651903e-14
+      }
     },
     {
       "step": 144,
@@ -2185,7 +3203,14 @@
       "price": 0.00029007719663124565,
       "update_batch_loss": 0.8149330563908281,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.018237050470456838,
+        "chosen_priced_score": 0.018237050470456838,
+        "priced_gap": 0.0,
+        "tolerance": 1.9237050470456837e-14
+      }
     },
     {
       "step": 145,
@@ -2199,7 +3224,14 @@
       "price": 0.0,
       "update_batch_loss": 0.5211427900177045,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.008268484865448773,
+        "chosen_priced_score": 0.008268484865448773,
+        "priced_gap": 0.0,
+        "tolerance": 9.268484865448774e-15
+      }
     },
     {
       "step": 146,
@@ -2213,7 +3245,14 @@
       "price": 0.0010851214925904874,
       "update_batch_loss": 0.5653762010911727,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.8689669005669267,
+        "chosen_priced_score": 1.8689669005669267,
+        "priced_gap": 0.0,
+        "tolerance": 1.8699669005669267e-12
+      }
     },
     {
       "step": 147,
@@ -2227,7 +3266,14 @@
       "price": 0.0014885920008746293,
       "update_batch_loss": 0.547443068028237,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.18616340536644838,
+        "chosen_priced_score": 0.18616340536644838,
+        "priced_gap": 0.0,
+        "tolerance": 1.8716340536644838e-13
+      }
     },
     {
       "step": 148,
@@ -2241,7 +3287,14 @@
       "price": 0.0007722545717569316,
       "update_batch_loss": 0.6432445957807047,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.024712146296221812,
+        "chosen_priced_score": -0.024712146296221812,
+        "priced_gap": 0.0,
+        "tolerance": 2.571214629622181e-14
+      }
     },
     {
       "step": 149,
@@ -2255,7 +3308,14 @@
       "price": 0.0008932726498959838,
       "update_batch_loss": 0.5381104031310087,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.02858472479667148,
+        "chosen_priced_score": -0.02858472479667148,
+        "priced_gap": 0.0,
+        "tolerance": 2.958472479667148e-14
+      }
     },
     {
       "step": 150,
@@ -2269,7 +3329,14 @@
       "price": 0.0002753940373278512,
       "update_batch_loss": 0.5474202516960758,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4485802493148641,
+        "chosen_priced_score": 0.4485802493148641,
+        "priced_gap": 0.0,
+        "tolerance": 4.495802493148641e-13
+      }
     },
     {
       "step": 151,
@@ -2283,7 +3350,14 @@
       "price": 0.0003027640157850777,
       "update_batch_loss": 0.5209268689397031,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1309577354316553,
+        "chosen_priced_score": 0.1309577354316553,
+        "priced_gap": 0.0,
+        "tolerance": 1.3195773543165528e-13
+      }
     },
     {
       "step": 152,
@@ -2297,7 +3371,14 @@
       "price": 0.0003156595353059075,
       "update_batch_loss": 0.5889230554498568,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.01010110512978904,
+        "chosen_priced_score": -0.01010110512978904,
+        "priced_gap": 0.0,
+        "tolerance": 1.110110512978904e-14
+      }
     },
     {
       "step": 153,
@@ -2311,7 +3392,14 @@
       "price": 0.0,
       "update_batch_loss": 0.5614043168624079,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 3,
+        "best_priced_score": 0.0,
+        "chosen_priced_score": 0.0,
+        "priced_gap": 0.0,
+        "tolerance": 1e-15
+      }
     },
     {
       "step": 154,
@@ -2325,7 +3413,14 @@
       "price": 0.0,
       "update_batch_loss": 0.75439001311349,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07940726551168106,
+        "chosen_priced_score": 0.07940726551168106,
+        "priced_gap": 0.0,
+        "tolerance": 8.040726551168106e-14
+      }
     },
     {
       "step": 155,
@@ -2339,7 +3434,14 @@
       "price": 0.0005181665830983779,
       "update_batch_loss": 0.6727425857583742,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.24529588614539924,
+        "chosen_priced_score": 0.24529588614539924,
+        "priced_gap": 0.0,
+        "tolerance": 2.462958861453992e-13
+      }
     },
     {
       "step": 156,
@@ -2353,7 +3455,14 @@
       "price": 0.0013413079053493807,
       "update_batch_loss": 0.4840135537697817,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.2141988453896984,
+        "chosen_priced_score": 1.2141988453896984,
+        "priced_gap": 0.0,
+        "tolerance": 1.2151988453896984e-12
+      }
     },
     {
       "step": 157,
@@ -2367,7 +3476,14 @@
       "price": 0.002035385871093582,
       "update_batch_loss": 0.5676183011089921,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0981646488379881,
+        "chosen_priced_score": 1.0981646488379881,
+        "priced_gap": 0.0,
+        "tolerance": 1.0991646488379881e-12
+      }
     },
     {
       "step": 158,
@@ -2381,7 +3497,14 @@
       "price": 0.0032292917353540216,
       "update_batch_loss": 0.8422168104789312,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.40295189280435484,
+        "chosen_priced_score": 0.40295189280435484,
+        "priced_gap": 0.0,
+        "tolerance": 4.0395189280435484e-13
+      }
     },
     {
       "step": 159,
@@ -2395,7 +3518,14 @@
       "price": 0.0017264941396800443,
       "update_batch_loss": 0.5357966377822085,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3514022142126836,
+        "chosen_priced_score": 0.3514022142126836,
+        "priced_gap": 0.0,
+        "tolerance": 3.524022142126836e-13
+      }
     },
     {
       "step": 160,
@@ -2409,7 +3539,14 @@
       "price": 0.0030744610361690752,
       "update_batch_loss": 0.635197635101387,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4558222018231377,
+        "chosen_priced_score": 1.4558222018231377,
+        "priced_gap": 0.0,
+        "tolerance": 1.4568222018231377e-12
+      }
     },
     {
       "step": 161,
@@ -2423,7 +3560,14 @@
       "price": 0.0007174198178150539,
       "update_batch_loss": 0.8800842658690897,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.02529686305173151,
+        "chosen_priced_score": 0.02529686305173151,
+        "priced_gap": 0.0,
+        "tolerance": 2.629686305173151e-14
+      }
     },
     {
       "step": 162,
@@ -2437,7 +3581,14 @@
       "price": 0.0008480786602071878,
       "update_batch_loss": 0.6924114221739626,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.10010427752374201,
+        "chosen_priced_score": 0.10010427752374201,
+        "priced_gap": 0.0,
+        "tolerance": 1.0110427752374201e-13
+      }
     },
     {
       "step": 163,
@@ -2451,7 +3602,14 @@
       "price": 0.0008494231254355368,
       "update_batch_loss": 0.5890915857933184,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.02718154001393718,
+        "chosen_priced_score": -0.02718154001393718,
+        "priced_gap": 0.0,
+        "tolerance": 2.8181540013937178e-14
+      }
     },
     {
       "step": 164,
@@ -2465,7 +3623,14 @@
       "price": 0.0014082859384740992,
       "update_batch_loss": 0.4996991902697018,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.045065150031171175,
+        "chosen_priced_score": -0.045065150031171175,
+        "priced_gap": 0.0,
+        "tolerance": 4.606515003117118e-14
+      }
     },
     {
       "step": 165,
@@ -2479,7 +3644,14 @@
       "price": 0.0004626267730179493,
       "update_batch_loss": 0.7393327857667172,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.15796857107393097,
+        "chosen_priced_score": 0.15796857107393097,
+        "priced_gap": 0.0,
+        "tolerance": 1.5896857107393097e-13
+      }
     },
     {
       "step": 166,
@@ -2493,7 +3665,14 @@
       "price": 0.0006414128175805489,
       "update_batch_loss": 0.8020827462859843,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.93992433733798,
+        "chosen_priced_score": 0.93992433733798,
+        "priced_gap": 0.0,
+        "tolerance": 9.409243373379801e-13
+      }
     },
     {
       "step": 167,
@@ -2507,7 +3686,14 @@
       "price": 0.0005094528657751722,
       "update_batch_loss": 0.6569642329768556,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.41252909409481114,
+        "chosen_priced_score": 0.41252909409481114,
+        "priced_gap": 0.0,
+        "tolerance": 4.135290940948111e-13
+      }
     },
     {
       "step": 168,
@@ -2521,7 +3707,14 @@
       "price": 0.0013869469405253805,
       "update_batch_loss": 0.7825872069001396,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.0314159928770252,
+        "chosen_priced_score": 1.0314159928770252,
+        "priced_gap": 0.0,
+        "tolerance": 1.0324159928770252e-12
+      }
     },
     {
       "step": 169,
@@ -2535,7 +3728,14 @@
       "price": 0.0006804434626395335,
       "update_batch_loss": 0.5264524612178829,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.28909194484474965,
+        "chosen_priced_score": 0.28909194484474965,
+        "priced_gap": 0.0,
+        "tolerance": 2.9009194484474965e-13
+      }
     },
     {
       "step": 170,
@@ -2549,7 +3749,14 @@
       "price": 0.0004659235643260436,
       "update_batch_loss": 0.5562941327807742,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2734258445526855,
+        "chosen_priced_score": 0.2734258445526855,
+        "priced_gap": 0.0,
+        "tolerance": 2.744258445526855e-13
+      }
     },
     {
       "step": 171,
@@ -2563,7 +3770,14 @@
       "price": 0.0010160239033865114,
       "update_batch_loss": 0.6648139299044078,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8309933963502723,
+        "chosen_priced_score": 0.8309933963502723,
+        "priced_gap": 0.0,
+        "tolerance": 8.319933963502723e-13
+      }
     },
     {
       "step": 172,
@@ -2577,7 +3791,14 @@
       "price": 0.0031801938841934402,
       "update_batch_loss": 0.5514023224344953,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.291393455468122,
+        "chosen_priced_score": 2.291393455468122,
+        "priced_gap": 0.0,
+        "tolerance": 2.2923934554681223e-12
+      }
     },
     {
       "step": 173,
@@ -2591,7 +3812,14 @@
       "price": 0.0024574386412253317,
       "update_batch_loss": 0.6569388992219973,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.34035580234292023,
+        "chosen_priced_score": 0.34035580234292023,
+        "priced_gap": 0.0,
+        "tolerance": 3.4135580234292024e-13
+      }
     },
     {
       "step": 174,
@@ -2605,7 +3833,14 @@
       "price": 0.004095198751637043,
       "update_batch_loss": 0.7466405034092622,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.697217306854721,
+        "chosen_priced_score": 1.697217306854721,
+        "priced_gap": 0.0,
+        "tolerance": 1.698217306854721e-12
+      }
     },
     {
       "step": 175,
@@ -2619,7 +3854,14 @@
       "price": 0.0011342294533473302,
       "update_batch_loss": 0.6074378275756828,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.105736148228343,
+        "chosen_priced_score": 0.105736148228343,
+        "priced_gap": 0.0,
+        "tolerance": 1.0673614822834299e-13
+      }
     },
     {
       "step": 176,
@@ -2633,7 +3875,14 @@
       "price": 0.0017512209722935729,
       "update_batch_loss": 0.6798071391806495,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8650072285190369,
+        "chosen_priced_score": 0.8650072285190369,
+        "priced_gap": 0.0,
+        "tolerance": 8.660072285190368e-13
+      }
     },
     {
       "step": 177,
@@ -2647,7 +3896,14 @@
       "price": 0.002663151267494055,
       "update_batch_loss": 0.6449932426201659,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6467956015565409,
+        "chosen_priced_score": 0.6467956015565409,
+        "priced_gap": 0.0,
+        "tolerance": 6.477956015565409e-13
+      }
     },
     {
       "step": 178,
@@ -2661,7 +3917,14 @@
       "price": 0.0008047377118243329,
       "update_batch_loss": 0.8607217308036116,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.08017073972687748,
+        "chosen_priced_score": 0.08017073972687748,
+        "priced_gap": 0.0,
+        "tolerance": 8.117073972687747e-14
+      }
     },
     {
       "step": 179,
@@ -2675,7 +3938,14 @@
       "price": 0.0004535940634456434,
       "update_batch_loss": 0.7173195432791193,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.38490432951212017,
+        "chosen_priced_score": 0.38490432951212017,
+        "priced_gap": 0.0,
+        "tolerance": 3.8590432951212017e-13
+      }
     },
     {
       "step": 180,
@@ -2689,7 +3959,14 @@
       "price": 0.0010189581758292825,
       "update_batch_loss": 0.6166275294216086,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.03257851771066778,
+        "chosen_priced_score": -0.03257851771066778,
+        "priced_gap": 0.0,
+        "tolerance": 3.3578517710667784e-14
+      }
     },
     {
       "step": 181,
@@ -2703,7 +3980,14 @@
       "price": 0.0005491281094706816,
       "update_batch_loss": 0.8318345386725556,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.015524709117832283,
+        "chosen_priced_score": -0.015524709117832283,
+        "priced_gap": 0.0,
+        "tolerance": 1.6524709117832282e-14
+      }
     },
     {
       "step": 182,
@@ -2717,7 +4001,14 @@
       "price": 0.0008671599710116312,
       "update_batch_loss": 0.7616640776061754,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1337420757668686,
+        "chosen_priced_score": 1.1337420757668686,
+        "priced_gap": 0.0,
+        "tolerance": 1.1347420757668686e-12
+      }
     },
     {
       "step": 183,
@@ -2731,7 +4022,14 @@
       "price": 0.0025389572517694014,
       "update_batch_loss": 0.5682400360043658,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5875459633657605,
+        "chosen_priced_score": 0.5875459633657605,
+        "priced_gap": 0.0,
+        "tolerance": 5.885459633657605e-13
+      }
     },
     {
       "step": 184,
@@ -2745,7 +4043,14 @@
       "price": 0.0009402074721197632,
       "update_batch_loss": 0.68693903964574,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.15979640774086756,
+        "chosen_priced_score": 0.15979640774086756,
+        "priced_gap": 0.0,
+        "tolerance": 1.6079640774086755e-13
+      }
     },
     {
       "step": 185,
@@ -2759,7 +4064,14 @@
       "price": 0.0003719628578128269,
       "update_batch_loss": 0.7672740291273832,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.700829689118294,
+        "chosen_priced_score": 0.700829689118294,
+        "priced_gap": 0.0,
+        "tolerance": 7.01829689118294e-13
+      }
     },
     {
       "step": 186,
@@ -2773,7 +4085,14 @@
       "price": 0.00036193172552356133,
       "update_batch_loss": 0.8762105984129658,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.08558681299599957,
+        "chosen_priced_score": 0.08558681299599957,
+        "priced_gap": 0.0,
+        "tolerance": 8.658681299599957e-14
+      }
     },
     {
       "step": 187,
@@ -2787,7 +4106,14 @@
       "price": 0.0,
       "update_batch_loss": 0.8071463485828491,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0013610170302597424,
+        "chosen_priced_score": 0.0013610170302597424,
+        "priced_gap": 0.0,
+        "tolerance": 2.3610170302597423e-15
+      }
     },
     {
       "step": 188,
@@ -2801,7 +4127,14 @@
       "price": 0.0004833943066806906,
       "update_batch_loss": 0.49158351145105983,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1942128724474456,
+        "chosen_priced_score": 0.1942128724474456,
+        "priced_gap": 0.0,
+        "tolerance": 1.9521287244744559e-13
+      }
     },
     {
       "step": 189,
@@ -2815,7 +4148,14 @@
       "price": 0.0008902687592798641,
       "update_batch_loss": 0.5793921589549083,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.9321990083988115,
+        "chosen_priced_score": 0.9321990083988115,
+        "priced_gap": 0.0,
+        "tolerance": 9.331990083988116e-13
+      }
     },
     {
       "step": 190,
@@ -2829,7 +4169,14 @@
       "price": 0.0012904046707529855,
       "update_batch_loss": 1.1123911108655804,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.041292949464095535,
+        "chosen_priced_score": -0.041292949464095535,
+        "priced_gap": 0.0,
+        "tolerance": 4.2292949464095537e-14
+      }
     },
     {
       "step": 191,
@@ -2843,7 +4190,14 @@
       "price": 9.166689809165305e-05,
       "update_batch_loss": 0.5291078460810938,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.15042082071972113,
+        "chosen_priced_score": 0.15042082071972113,
+        "priced_gap": 0.0,
+        "tolerance": 1.5142082071972113e-13
+      }
     },
     {
       "step": 192,
@@ -2857,7 +4211,14 @@
       "price": 0.0006726975176928446,
       "update_batch_loss": 0.569295188557095,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4926875631976626,
+        "chosen_priced_score": 1.4926875631976626,
+        "priced_gap": 0.0,
+        "tolerance": 1.4936875631976627e-12
+      }
     },
     {
       "step": 193,
@@ -2871,7 +4232,14 @@
       "price": 0.0020465695204646434,
       "update_batch_loss": 0.6717271613899976,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2239328666605982,
+        "chosen_priced_score": 0.2239328666605982,
+        "priced_gap": 0.0,
+        "tolerance": 2.249328666605982e-13
+      }
     },
     {
       "step": 194,
@@ -2885,7 +4253,14 @@
       "price": 0.00039117503667221074,
       "update_batch_loss": 0.4637173972879948,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.012517601173510744,
+        "chosen_priced_score": -0.012517601173510744,
+        "priced_gap": 0.0,
+        "tolerance": 1.3517601173510743e-14
+      }
     },
     {
       "step": 195,
@@ -2899,7 +4274,14 @@
       "price": 0.00022145457217640163,
       "update_batch_loss": 0.9735026380911456,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.005078171601394747,
+        "chosen_priced_score": -0.005078171601394747,
+        "priced_gap": 0.0,
+        "tolerance": 6.078171601394746e-15
+      }
     },
     {
       "step": 196,
@@ -2913,7 +4295,14 @@
       "price": 0.0,
       "update_batch_loss": 0.4615370089555372,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.133646133416198,
+        "chosen_priced_score": 2.133646133416198,
+        "priced_gap": 0.0,
+        "tolerance": 2.1346461334161978e-12
+      }
     },
     {
       "step": 197,
@@ -2927,7 +4316,14 @@
       "price": 0.0011232217937636136,
       "update_batch_loss": 0.670732727770077,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 448
+      "line_search_forward_examples": 448,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.7062947728482336,
+        "chosen_priced_score": 1.7062947728482336,
+        "priced_gap": 0.0,
+        "tolerance": 1.7072947728482336e-12
+      }
     },
     {
       "step": 198,
@@ -2941,7 +4337,14 @@
       "price": 0.0012867307720931251,
       "update_batch_loss": 0.7290934980355113,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1196795491577747,
+        "chosen_priced_score": 1.1196795491577747,
+        "priced_gap": 0.0,
+        "tolerance": 1.1206795491577748e-12
+      }
     },
     {
       "step": 199,
@@ -2955,7 +4358,14 @@
       "price": 0.0009320015231512956,
       "update_batch_loss": 0.6309211859263191,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.023386878790426825,
+        "chosen_priced_score": -0.023386878790426825,
+        "priced_gap": 0.0,
+        "tolerance": 2.4386878790426824e-14
+      }
     },
     {
       "step": 200,
@@ -2969,7 +4379,14 @@
       "price": 0.0006929797139803962,
       "update_batch_loss": 0.6012213605732539,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.19326910431489885,
+        "chosen_priced_score": 0.19326910431489885,
+        "priced_gap": 0.0,
+        "tolerance": 1.9426910431489886e-13
+      }
     },
     {
       "step": 201,
@@ -2983,7 +4400,14 @@
       "price": 0.0004504775730623357,
       "update_batch_loss": 0.6461550472246235,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.23627315887028433,
+        "chosen_priced_score": 0.23627315887028433,
+        "priced_gap": 0.0,
+        "tolerance": 2.3727315887028433e-13
+      }
     },
     {
       "step": 202,
@@ -2997,7 +4421,14 @@
       "price": 0.001076338762363699,
       "update_batch_loss": 0.5502184611438938,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.8674183129529263,
+        "chosen_priced_score": 1.8674183129529263,
+        "priced_gap": 0.0,
+        "tolerance": 1.8684183129529263e-12
+      }
     },
     {
       "step": 203,
@@ -3011,7 +4442,14 @@
       "price": 0.0008278648672082367,
       "update_batch_loss": 0.60848479521449,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.06752134748015756,
+        "chosen_priced_score": 0.06752134748015756,
+        "priced_gap": 0.0,
+        "tolerance": 6.852134748015756e-14
+      }
     },
     {
       "step": 204,
@@ -3025,7 +4463,14 @@
       "price": 0.0005050959494794387,
       "update_batch_loss": 0.6539537503776429,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5329831095755638,
+        "chosen_priced_score": 0.5329831095755638,
+        "priced_gap": 0.0,
+        "tolerance": 5.339831095755638e-13
+      }
     },
     {
       "step": 205,
@@ -3039,7 +4484,14 @@
       "price": 0.0013594211670687475,
       "update_batch_loss": 0.6523346449183283,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8863788348417473,
+        "chosen_priced_score": 0.8863788348417473,
+        "priced_gap": 0.0,
+        "tolerance": 8.873788348417473e-13
+      }
     },
     {
       "step": 206,
@@ -3053,7 +4505,14 @@
       "price": 0.0006690260703094129,
       "update_batch_loss": 0.5020023301367555,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0197622013545347,
+        "chosen_priced_score": 0.0197622013545347,
+        "priced_gap": 0.0,
+        "tolerance": 2.07622013545347e-14
+      }
     },
     {
       "step": 207,
@@ -3067,7 +4526,14 @@
       "price": 0.0019033499587922833,
       "update_batch_loss": 0.5201315081721407,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.4506738752371326,
+        "chosen_priced_score": 2.4506738752371326,
+        "priced_gap": 0.0,
+        "tolerance": 2.4516738752371327e-12
+      }
     },
     {
       "step": 208,
@@ -3081,7 +4547,14 @@
       "price": 0.0013520350594535414,
       "update_batch_loss": 0.585934067945213,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5442862405170108,
+        "chosen_priced_score": 0.5442862405170108,
+        "priced_gap": 0.0,
+        "tolerance": 5.452862405170108e-13
+      }
     },
     {
       "step": 209,
@@ -3095,7 +4568,14 @@
       "price": 0.003368662196374427,
       "update_batch_loss": 0.6063008963041892,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.2844121623796765,
+        "chosen_priced_score": 1.2844121623796765,
+        "priced_gap": 0.0,
+        "tolerance": 1.2854121623796766e-12
+      }
     },
     {
       "step": 210,
@@ -3109,7 +4589,14 @@
       "price": 0.0031472952778416525,
       "update_batch_loss": 0.5158202131911492,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.2026486381712458,
+        "chosen_priced_score": 1.2026486381712458,
+        "priced_gap": 0.0,
+        "tolerance": 1.2036486381712458e-12
+      }
     },
     {
       "step": 211,
@@ -3123,7 +4610,14 @@
       "price": 0.0003708531896751794,
       "update_batch_loss": 0.5168780352873186,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.08347072976572059,
+        "chosen_priced_score": 0.08347072976572059,
+        "priced_gap": 0.0,
+        "tolerance": 8.447072976572058e-14
+      }
     },
     {
       "step": 212,
@@ -3137,7 +4631,14 @@
       "price": 0.0005691823736960032,
       "update_batch_loss": 0.6678224089837046,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.07262828356563975,
+        "chosen_priced_score": 0.07262828356563975,
+        "priced_gap": 0.0,
+        "tolerance": 7.362828356563973e-14
+      }
     },
     {
       "step": 213,
@@ -3151,7 +4652,14 @@
       "price": 0.0012279047518676351,
       "update_batch_loss": 0.7730473433389498,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.05410345662852706,
+        "chosen_priced_score": 0.05410345662852706,
+        "priced_gap": 0.0,
+        "tolerance": 5.510345662852706e-14
+      }
     },
     {
       "step": 214,
@@ -3165,7 +4673,14 @@
       "price": 0.00042034967396387064,
       "update_batch_loss": 0.49091009843028177,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2450889575369872,
+        "chosen_priced_score": 0.2450889575369872,
+        "priced_gap": 0.0,
+        "tolerance": 2.460889575369872e-13
+      }
     },
     {
       "step": 215,
@@ -3179,7 +4694,14 @@
       "price": 0.001160315107998582,
       "update_batch_loss": 0.6237034995493298,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.42219383801215277,
+        "chosen_priced_score": 0.42219383801215277,
+        "priced_gap": 0.0,
+        "tolerance": 4.2319383801215276e-13
+      }
     },
     {
       "step": 216,
@@ -3193,7 +4715,14 @@
       "price": 0.0005475300140938624,
       "update_batch_loss": 0.6237044244529967,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.28644127224296273,
+        "chosen_priced_score": 0.28644127224296273,
+        "priced_gap": 0.0,
+        "tolerance": 2.874412722429627e-13
+      }
     },
     {
       "step": 217,
@@ -3207,7 +4736,14 @@
       "price": 0.0009376961114201296,
       "update_batch_loss": 0.6610971531811166,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1095435691753278,
+        "chosen_priced_score": 0.1095435691753278,
+        "priced_gap": 0.0,
+        "tolerance": 1.1054356917532779e-13
+      }
     },
     {
       "step": 218,
@@ -3221,7 +4757,14 @@
       "price": 0.001186083059816945,
       "update_batch_loss": 0.6512548956123898,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.03795465791414224,
+        "chosen_priced_score": -0.03795465791414224,
+        "priced_gap": 0.0,
+        "tolerance": 3.8954657914142236e-14
+      }
     },
     {
       "step": 219,
@@ -3235,7 +4778,14 @@
       "price": 0.0019562788513258537,
       "update_batch_loss": 0.4990040528746319,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.1064331571312613,
+        "chosen_priced_score": 2.1064331571312613,
+        "priced_gap": 0.0,
+        "tolerance": 2.1074331571312612e-12
+      }
     },
     {
       "step": 220,
@@ -3249,7 +4799,14 @@
       "price": 0.0005529187922440445,
       "update_batch_loss": 0.4040539440585744,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.014322373088910349,
+        "chosen_priced_score": -0.014322373088910349,
+        "priced_gap": 0.0,
+        "tolerance": 1.5322373088910348e-14
+      }
     },
     {
       "step": 221,
@@ -3263,7 +4820,14 @@
       "price": 0.00250191197504127,
       "update_batch_loss": 0.6604502144459503,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.0745480565356466,
+        "chosen_priced_score": -0.0745480565356466,
+        "priced_gap": 0.0,
+        "tolerance": 7.554805653564659e-14
+      }
     },
     {
       "step": 222,
@@ -3277,7 +4841,14 @@
       "price": 0.0006412438998371859,
       "update_batch_loss": 0.6859636954561593,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.3908504230820693,
+        "chosen_priced_score": 0.3908504230820693,
+        "priced_gap": 0.0,
+        "tolerance": 3.918504230820693e-13
+      }
     },
     {
       "step": 223,
@@ -3291,7 +4862,14 @@
       "price": 0.0011123513495787,
       "update_batch_loss": 0.39344785946207117,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0924425016862261,
+        "chosen_priced_score": 0.0924425016862261,
+        "priced_gap": 0.0,
+        "tolerance": 9.344250168622609e-14
+      }
     },
     {
       "step": 224,
@@ -3305,7 +4883,14 @@
       "price": 0.0002162110243264747,
       "update_batch_loss": 0.7475055104819542,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0017784139747031528,
+        "chosen_priced_score": 0.0017784139747031528,
+        "priced_gap": 0.0,
+        "tolerance": 2.778413974703153e-15
+      }
     },
     {
       "step": 225,
@@ -3319,7 +4904,14 @@
       "price": 0.0,
       "update_batch_loss": 0.656955999359735,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.9186876254645492,
+        "chosen_priced_score": 0.9186876254645492,
+        "priced_gap": 0.0,
+        "tolerance": 9.196876254645493e-13
+      }
     },
     {
       "step": 226,
@@ -3333,7 +4925,14 @@
       "price": 0.00027645090967720484,
       "update_batch_loss": 0.5694192251977149,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.003944789816518093,
+        "chosen_priced_score": 0.003944789816518093,
+        "priced_gap": 0.0,
+        "tolerance": 4.944789816518094e-15
+      }
     },
     {
       "step": 227,
@@ -3347,7 +4946,14 @@
       "price": 0.0004153928476709817,
       "update_batch_loss": 0.5234014066191748,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.10677938437807608,
+        "chosen_priced_score": 0.10677938437807608,
+        "priced_gap": 0.0,
+        "tolerance": 1.0777938437807607e-13
+      }
     },
     {
       "step": 228,
@@ -3361,7 +4967,14 @@
       "price": 0.00020565417098301176,
       "update_batch_loss": 0.572525427703606,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8026445203842107,
+        "chosen_priced_score": 0.8026445203842107,
+        "priced_gap": 0.0,
+        "tolerance": 8.036445203842107e-13
+      }
     },
     {
       "step": 229,
@@ -3375,7 +4988,14 @@
       "price": 0.0011650745801510523,
       "update_batch_loss": 0.642990126084641,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.14393309597515103,
+        "chosen_priced_score": 0.14393309597515103,
+        "priced_gap": 0.0,
+        "tolerance": 1.4493309597515103e-13
+      }
     },
     {
       "step": 230,
@@ -3389,7 +5009,14 @@
       "price": 0.0002998754791091558,
       "update_batch_loss": 0.7420346158234503,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0030703545538200046,
+        "chosen_priced_score": 0.0030703545538200046,
+        "priced_gap": 0.0,
+        "tolerance": 4.070354553820005e-15
+      }
     },
     {
       "step": 231,
@@ -3403,7 +5030,14 @@
       "price": 0.0001613041974766674,
       "update_batch_loss": 0.629917364928735,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.03022246003308485,
+        "chosen_priced_score": 0.03022246003308485,
+        "priced_gap": 0.0,
+        "tolerance": 3.122246003308485e-14
+      }
     },
     {
       "step": 232,
@@ -3417,7 +5051,14 @@
       "price": 0.0,
       "update_batch_loss": 0.6055406225905011,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.18043734421996815,
+        "chosen_priced_score": 0.18043734421996815,
+        "priced_gap": 0.0,
+        "tolerance": 1.8143734421996815e-13
+      }
     },
     {
       "step": 233,
@@ -3431,7 +5072,14 @@
       "price": 0.0019128916631568306,
       "update_batch_loss": 0.628622183697163,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.231633128462689,
+        "chosen_priced_score": 1.231633128462689,
+        "priced_gap": 0.0,
+        "tolerance": 1.232633128462689e-12
+      }
     },
     {
       "step": 234,
@@ -3445,7 +5093,14 @@
       "price": 0.000230035277794991,
       "update_batch_loss": 0.45517458790542376,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.06173011228330977,
+        "chosen_priced_score": 0.06173011228330977,
+        "priced_gap": 0.0,
+        "tolerance": 6.273011228330976e-14
+      }
     },
     {
       "step": 235,
@@ -3459,7 +5114,14 @@
       "price": 0.00029681963662888175,
       "update_batch_loss": 0.7547038078456167,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6983259857427783,
+        "chosen_priced_score": 0.6983259857427783,
+        "priced_gap": 0.0,
+        "tolerance": 6.993259857427783e-13
+      }
     },
     {
       "step": 236,
@@ -3473,7 +5135,14 @@
       "price": 0.0009461499463836097,
       "update_batch_loss": 0.7152986290532586,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.25837977888960023,
+        "chosen_priced_score": 0.25837977888960023,
+        "priced_gap": 0.0,
+        "tolerance": 2.593797788896002e-13
+      }
     },
     {
       "step": 237,
@@ -3487,7 +5156,14 @@
       "price": 0.0005270127031579104,
       "update_batch_loss": 0.7359203006520169,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.19992793237617096,
+        "chosen_priced_score": 0.19992793237617096,
+        "priced_gap": 0.0,
+        "tolerance": 2.0092793237617096e-13
+      }
     },
     {
       "step": 238,
@@ -3501,7 +5177,14 @@
       "price": 0.0004169651640726416,
       "update_batch_loss": 0.6514987471460558,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5415930425295036,
+        "chosen_priced_score": 0.5415930425295036,
+        "priced_gap": 0.0,
+        "tolerance": 5.425930425295035e-13
+      }
     },
     {
       "step": 239,
@@ -3515,7 +5198,14 @@
       "price": 0.00014115480432723667,
       "update_batch_loss": 0.48863143153417454,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.003173229745639075,
+        "chosen_priced_score": -0.003173229745639075,
+        "priced_gap": 0.0,
+        "tolerance": 4.1732297456390746e-15
+      }
     },
     {
       "step": 240,
@@ -3529,7 +5219,14 @@
       "price": 0.0,
       "update_batch_loss": 0.5631489390139418,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7105605457693289,
+        "chosen_priced_score": 0.7105605457693289,
+        "priced_gap": 0.0,
+        "tolerance": 7.115605457693289e-13
+      }
     },
     {
       "step": 241,
@@ -3543,7 +5240,14 @@
       "price": 0.0007293319529701484,
       "update_batch_loss": 0.5070433599956012,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.997718742768544,
+        "chosen_priced_score": 0.997718742768544,
+        "priced_gap": 0.0,
+        "tolerance": 9.98718742768544e-13
+      }
     },
     {
       "step": 242,
@@ -3557,7 +5261,14 @@
       "price": 0.0013616159253950389,
       "update_batch_loss": 0.6964393064171419,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.04357170961264124,
+        "chosen_priced_score": -0.04357170961264124,
+        "priced_gap": 0.0,
+        "tolerance": 4.4571709612641245e-14
+      }
     },
     {
       "step": 243,
@@ -3571,7 +5282,14 @@
       "price": 0.0002450271585364382,
       "update_batch_loss": 0.5722913996742037,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.054352470249312654,
+        "chosen_priced_score": 0.054352470249312654,
+        "priced_gap": 0.0,
+        "tolerance": 5.5352470249312657e-14
+      }
     },
     {
       "step": 244,
@@ -3585,7 +5303,14 @@
       "price": 0.0005762604904500375,
       "update_batch_loss": 0.5638031071044189,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.533985560468958,
+        "chosen_priced_score": 1.533985560468958,
+        "priced_gap": 0.0,
+        "tolerance": 1.5349855604689581e-12
+      }
     },
     {
       "step": 245,
@@ -3599,7 +5324,14 @@
       "price": 0.001138108960106148,
       "update_batch_loss": 0.6226110105305026,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6193427976841632,
+        "chosen_priced_score": 0.6193427976841632,
+        "priced_gap": 0.0,
+        "tolerance": 6.203427976841632e-13
+      }
     },
     {
       "step": 246,
@@ -3613,7 +5345,14 @@
       "price": 0.0012003224436766993,
       "update_batch_loss": 0.6658456012355843,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0849192395387234,
+        "chosen_priced_score": 0.0849192395387234,
+        "priced_gap": 0.0,
+        "tolerance": 8.59192395387234e-14
+      }
     },
     {
       "step": 247,
@@ -3627,7 +5366,14 @@
       "price": 0.0008330073795651137,
       "update_batch_loss": 0.7019197231614938,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.531446094920973,
+        "chosen_priced_score": 0.531446094920973,
+        "priced_gap": 0.0,
+        "tolerance": 5.324460949209729e-13
+      }
     },
     {
       "step": 248,
@@ -3641,7 +5387,14 @@
       "price": 0.0004703700110313898,
       "update_batch_loss": 0.7080710600204569,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0534881466970271,
+        "chosen_priced_score": 0.0534881466970271,
+        "priced_gap": 0.0,
+        "tolerance": 5.4488146697027104e-14
+      }
     },
     {
       "step": 249,
@@ -3655,7 +5408,14 @@
       "price": 0.0007094541492212789,
       "update_batch_loss": 0.5068860966094351,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8533743190212321,
+        "chosen_priced_score": 0.8533743190212321,
+        "priced_gap": 0.0,
+        "tolerance": 8.54374319021232e-13
+      }
     },
     {
       "step": 250,
@@ -3669,7 +5429,14 @@
       "price": 0.0004960903508529334,
       "update_batch_loss": 0.49626656218716225,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.05672884527561045,
+        "chosen_priced_score": 0.05672884527561045,
+        "priced_gap": 0.0,
+        "tolerance": 5.772884527561045e-14
+      }
     },
     {
       "step": 251,
@@ -3683,7 +5450,14 @@
       "price": 0.0,
       "update_batch_loss": 0.5252898223202676,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5289401052604666,
+        "chosen_priced_score": 0.5289401052604666,
+        "priced_gap": 0.0,
+        "tolerance": 5.299401052604666e-13
+      }
     },
     {
       "step": 252,
@@ -3697,7 +5471,14 @@
       "price": 0.0008484756021733292,
       "update_batch_loss": 0.44744934699308714,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.8188186968492538,
+        "chosen_priced_score": 0.8188186968492538,
+        "priced_gap": 0.0,
+        "tolerance": 8.198186968492538e-13
+      }
     },
     {
       "step": 253,
@@ -3711,7 +5492,14 @@
       "price": 0.0012217692342136055,
       "update_batch_loss": 0.8577163446599471,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.039096615494835375,
+        "chosen_priced_score": -0.039096615494835375,
+        "priced_gap": 0.0,
+        "tolerance": 4.009661549483538e-14
+      }
     },
     {
       "step": 254,
@@ -3725,7 +5513,14 @@
       "price": 0.0005811595179772568,
       "update_batch_loss": 0.4979213584356904,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2608483437435806,
+        "chosen_priced_score": 0.2608483437435806,
+        "priced_gap": 0.0,
+        "tolerance": 2.618483437435806e-13
+      }
     },
     {
       "step": 255,
@@ -3739,7 +5534,14 @@
       "price": 0.00015296757133195373,
       "update_batch_loss": 0.4508898180658351,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.03856385956170117,
+        "chosen_priced_score": 0.03856385956170117,
+        "priced_gap": 0.0,
+        "tolerance": 3.956385956170117e-14
+      }
     },
     {
       "step": 256,
@@ -3753,7 +5555,14 @@
       "price": 0.0005911498206686471,
       "update_batch_loss": 0.6018300040222786,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1209099307539034,
+        "chosen_priced_score": 1.1209099307539034,
+        "priced_gap": 0.0,
+        "tolerance": 1.1219099307539034e-12
+      }
     },
     {
       "step": 257,
@@ -3767,7 +5576,14 @@
       "price": 0.0009770047008985294,
       "update_batch_loss": 0.6609943521323833,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5323413267698293,
+        "chosen_priced_score": 0.5323413267698293,
+        "priced_gap": 0.0,
+        "tolerance": 5.333413267698292e-13
+      }
     },
     {
       "step": 258,
@@ -3781,7 +5597,14 @@
       "price": 0.0016587590493535927,
       "update_batch_loss": 0.6142560242682757,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7132148587251017,
+        "chosen_priced_score": 0.7132148587251017,
+        "priced_gap": 0.0,
+        "tolerance": 7.142148587251017e-13
+      }
     },
     {
       "step": 259,
@@ -3795,7 +5618,14 @@
       "price": 0.002568254703524367,
       "update_batch_loss": 0.7260477214926514,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7856399237841816,
+        "chosen_priced_score": 0.7856399237841816,
+        "priced_gap": 0.0,
+        "tolerance": 7.866399237841815e-13
+      }
     },
     {
       "step": 260,
@@ -3809,7 +5639,14 @@
       "price": 0.0017879726306101952,
       "update_batch_loss": 0.3361988621939834,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.38731328025095807,
+        "chosen_priced_score": 0.38731328025095807,
+        "priced_gap": 0.0,
+        "tolerance": 3.8831328025095804e-13
+      }
     },
     {
       "step": 261,
@@ -3823,7 +5660,14 @@
       "price": 0.0017052536011410702,
       "update_batch_loss": 0.6976325428895427,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.054568115236514246,
+        "chosen_priced_score": -0.054568115236514246,
+        "priced_gap": 0.0,
+        "tolerance": 5.5568115236514246e-14
+      }
     },
     {
       "step": 262,
@@ -3837,7 +5681,14 @@
       "price": 0.0013096479760199495,
       "update_batch_loss": 0.54103765158575,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.12258304654600619,
+        "chosen_priced_score": 0.12258304654600619,
+        "priced_gap": 0.0,
+        "tolerance": 1.2358304654600618e-13
+      }
     },
     {
       "step": 263,
@@ -3851,7 +5702,14 @@
       "price": 0.0005462570643423407,
       "update_batch_loss": 0.5427217830116876,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.005587941051225067,
+        "chosen_priced_score": -0.005587941051225067,
+        "priced_gap": 0.0,
+        "tolerance": 6.5879410512250664e-15
+      }
     },
     {
       "step": 264,
@@ -3865,7 +5723,14 @@
       "price": 0.0002871900430288409,
       "update_batch_loss": 0.4957782266744736,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.0031531978336402913,
+        "chosen_priced_score": -0.0031531978336402913,
+        "priced_gap": 0.0,
+        "tolerance": 4.153197833640292e-15
+      }
     },
     {
       "step": 265,
@@ -3879,7 +5744,14 @@
       "price": 0.00029023847985110965,
       "update_batch_loss": 0.6413534580582524,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 448
+      "line_search_forward_examples": 448,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.24250870369207292,
+        "chosen_priced_score": 0.24250870369207292,
+        "priced_gap": 0.0,
+        "tolerance": 2.435087036920729e-13
+      }
     },
     {
       "step": 266,
@@ -3893,7 +5765,14 @@
       "price": 0.00039569276694579193,
       "update_batch_loss": 0.4338700660908738,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.33558267181797874,
+        "chosen_priced_score": 0.33558267181797874,
+        "priced_gap": 0.0,
+        "tolerance": 3.365826718179787e-13
+      }
     },
     {
       "step": 267,
@@ -3907,7 +5786,14 @@
       "price": 0.00042076151414508677,
       "update_batch_loss": 0.6057240808801109,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.002548719632454342,
+        "chosen_priced_score": -0.002548719632454342,
+        "priced_gap": 0.0,
+        "tolerance": 3.548719632454342e-15
+      }
     },
     {
       "step": 268,
@@ -3921,7 +5807,14 @@
       "price": 0.0003422192389977222,
       "update_batch_loss": 0.549132951756939,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6906662628408966,
+        "chosen_priced_score": 0.6906662628408966,
+        "priced_gap": 0.0,
+        "tolerance": 6.916662628408965e-13
+      }
     },
     {
       "step": 269,
@@ -3935,7 +5828,14 @@
       "price": 0.0019470019196086866,
       "update_batch_loss": 0.5359454320393027,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2712513268822772,
+        "chosen_priced_score": 0.2712513268822772,
+        "priced_gap": 0.0,
+        "tolerance": 2.722513268822772e-13
+      }
     },
     {
       "step": 270,
@@ -3949,7 +5849,14 @@
       "price": 0.0003864138162499682,
       "update_batch_loss": 0.49131803644174643,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.010808155574033442,
+        "chosen_priced_score": -0.010808155574033442,
+        "priced_gap": 0.0,
+        "tolerance": 1.1808155574033442e-14
+      }
     },
     {
       "step": 271,
@@ -3963,7 +5870,14 @@
       "price": 0.00046488745564836066,
       "update_batch_loss": 0.5600923921799293,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2972738751912487,
+        "chosen_priced_score": 0.2972738751912487,
+        "priced_gap": 0.0,
+        "tolerance": 2.982738751912487e-13
+      }
     },
     {
       "step": 272,
@@ -3977,7 +5891,14 @@
       "price": 0.0007207649067363493,
       "update_batch_loss": 0.6706628806822718,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.0007762768102544,
+        "chosen_priced_score": 2.0007762768102544,
+        "priced_gap": 0.0,
+        "tolerance": 2.0017762768102543e-12
+      }
     },
     {
       "step": 273,
@@ -3991,7 +5912,14 @@
       "price": 0.0010509790242866695,
       "update_batch_loss": 0.597752172871308,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.20826925381700118,
+        "chosen_priced_score": 0.20826925381700118,
+        "priced_gap": 0.0,
+        "tolerance": 2.0926925381700118e-13
+      }
     },
     {
       "step": 274,
@@ -4005,7 +5933,14 @@
       "price": 0.0003898142583942759,
       "update_batch_loss": 0.4682604411792219,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.38420058223213477,
+        "chosen_priced_score": 0.38420058223213477,
+        "priced_gap": 0.0,
+        "tolerance": 3.8520058223213475e-13
+      }
     },
     {
       "step": 275,
@@ -4019,7 +5954,14 @@
       "price": 0.0003672146757351958,
       "update_batch_loss": 0.4256105035042093,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.011750869623526266,
+        "chosen_priced_score": -0.011750869623526266,
+        "priced_gap": 0.0,
+        "tolerance": 1.2750869623526266e-14
+      }
     },
     {
       "step": 276,
@@ -4033,7 +5975,14 @@
       "price": 0.0006012354383940694,
       "update_batch_loss": 0.6768254869829199,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.5479785240290522,
+        "chosen_priced_score": 1.5479785240290522,
+        "priced_gap": 0.0,
+        "tolerance": 1.5489785240290522e-12
+      }
     },
     {
       "step": 277,
@@ -4047,7 +5996,14 @@
       "price": 0.0021534005992619046,
       "update_batch_loss": 0.7583624212809998,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.6095537187517259,
+        "chosen_priced_score": 0.6095537187517259,
+        "priced_gap": 0.0,
+        "tolerance": 6.105537187517259e-13
+      }
     },
     {
       "step": 278,
@@ -4061,7 +6017,14 @@
       "price": 0.0003592523542435679,
       "update_batch_loss": 0.34034708592312196,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.011496075335794173,
+        "chosen_priced_score": -0.011496075335794173,
+        "priced_gap": 0.0,
+        "tolerance": 1.2496075335794174e-14
+      }
     },
     {
       "step": 279,
@@ -4075,7 +6038,14 @@
       "price": 0.0005255096503871422,
       "update_batch_loss": 0.6618904489032518,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4180507415509367,
+        "chosen_priced_score": 0.4180507415509367,
+        "priced_gap": 0.0,
+        "tolerance": 4.190507415509367e-13
+      }
     },
     {
       "step": 280,
@@ -4089,7 +6059,14 @@
       "price": 0.0013811516020177737,
       "update_batch_loss": 0.673891847897436,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.1182628756889987,
+        "chosen_priced_score": 1.1182628756889987,
+        "priced_gap": 0.0,
+        "tolerance": 1.119262875688999e-12
+      }
     },
     {
       "step": 281,
@@ -4103,7 +6080,14 @@
       "price": 0.001433487954087979,
       "update_batch_loss": 0.7226552309863957,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.33402484050285197,
+        "chosen_priced_score": 0.33402484050285197,
+        "priced_gap": 0.0,
+        "tolerance": 3.3502484050285196e-13
+      }
     },
     {
       "step": 282,
@@ -4117,7 +6101,14 @@
       "price": 0.0012295721386108357,
       "update_batch_loss": 0.6878684213793952,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.21448516088372788,
+        "chosen_priced_score": 0.21448516088372788,
+        "priced_gap": 0.0,
+        "tolerance": 2.1548516088372787e-13
+      }
     },
     {
       "step": 283,
@@ -4131,7 +6122,14 @@
       "price": 0.0009181914271618086,
       "update_batch_loss": 0.5577559861135972,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.9278337847782322,
+        "chosen_priced_score": 0.9278337847782322,
+        "priced_gap": 0.0,
+        "tolerance": 9.288337847782322e-13
+      }
     },
     {
       "step": 284,
@@ -4145,7 +6143,14 @@
       "price": 0.0011012088603431151,
       "update_batch_loss": 0.5104416679970676,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 2.5187395315903816,
+        "chosen_priced_score": 2.5187395315903816,
+        "priced_gap": 0.0,
+        "tolerance": 2.5197395315903814e-12
+      }
     },
     {
       "step": 285,
@@ -4159,7 +6164,14 @@
       "price": 0.00045349672758006386,
       "update_batch_loss": 0.5886577686792687,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.014511895282562044,
+        "chosen_priced_score": -0.014511895282562044,
+        "priced_gap": 0.0,
+        "tolerance": 1.551189528256204e-14
+      }
     },
     {
       "step": 286,
@@ -4173,7 +6185,14 @@
       "price": 0.00016579118740018856,
       "update_batch_loss": 0.46585367394528077,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.05330562753312918,
+        "chosen_priced_score": 0.05330562753312918,
+        "priced_gap": 0.0,
+        "tolerance": 5.4305627533129185e-14
+      }
     },
     {
       "step": 287,
@@ -4187,7 +6206,14 @@
       "price": 0.0005925495291049876,
       "update_batch_loss": 0.7522874060317679,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.8320496142691702,
+        "chosen_priced_score": 1.8320496142691702,
+        "priced_gap": 0.0,
+        "tolerance": 1.8330496142691704e-12
+      }
     },
     {
       "step": 288,
@@ -4201,7 +6227,14 @@
       "price": 0.00036931267670268163,
       "update_batch_loss": 0.3759347864457808,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.1575597763447415,
+        "chosen_priced_score": 0.1575597763447415,
+        "priced_gap": 0.0,
+        "tolerance": 1.585597763447415e-13
+      }
     },
     {
       "step": 289,
@@ -4215,7 +6248,14 @@
       "price": 0.00127256507929808,
       "update_batch_loss": 0.753788853477806,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7198905462616437,
+        "chosen_priced_score": 0.7198905462616437,
+        "priced_gap": 0.0,
+        "tolerance": 7.208905462616437e-13
+      }
     },
     {
       "step": 290,
@@ -4229,7 +6269,14 @@
       "price": 0.0006365407306880748,
       "update_batch_loss": 0.41021275514513517,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": -0.013660307325504793,
+        "chosen_priced_score": -0.013660307325504793,
+        "priced_gap": 0.0,
+        "tolerance": 1.4660307325504794e-14
+      }
     },
     {
       "step": 291,
@@ -4243,7 +6290,14 @@
       "price": 0.0004324363013866001,
       "update_batch_loss": 0.5014057572077663,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.5529791819809889,
+        "chosen_priced_score": 0.5529791819809889,
+        "priced_gap": 0.0,
+        "tolerance": 5.539791819809889e-13
+      }
     },
     {
       "step": 292,
@@ -4257,7 +6311,14 @@
       "price": 0.0010869430290944377,
       "update_batch_loss": 0.5658328842637099,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.21685292441603637,
+        "chosen_priced_score": 0.21685292441603637,
+        "priced_gap": 0.0,
+        "tolerance": 2.1785292441603636e-13
+      }
     },
     {
       "step": 293,
@@ -4271,7 +6332,14 @@
       "price": 0.0008489150048099904,
       "update_batch_loss": 0.3821790316144909,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.0947200589612069,
+        "chosen_priced_score": 0.0947200589612069,
+        "priced_gap": 0.0,
+        "tolerance": 9.572005896120689e-14
+      }
     },
     {
       "step": 294,
@@ -4285,7 +6353,14 @@
       "price": 0.0008860337033638488,
       "update_batch_loss": 0.5534888055218147,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.4143491731372907,
+        "chosen_priced_score": 0.4143491731372907,
+        "priced_gap": 0.0,
+        "tolerance": 4.1534917313729066e-13
+      }
     },
     {
       "step": 295,
@@ -4299,7 +6374,14 @@
       "price": 0.0014047564512857042,
       "update_batch_loss": 0.5496302615099162,
       "line_search_status": "non_descent",
-      "line_search_forward_examples": 0
+      "line_search_forward_examples": 0,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.30811812344606565,
+        "chosen_priced_score": 0.30811812344606565,
+        "priced_gap": 0.0,
+        "tolerance": 3.091181234460656e-13
+      }
     },
     {
       "step": 296,
@@ -4313,7 +6395,14 @@
       "price": 0.0006145058313371639,
       "update_batch_loss": 0.50555722999527,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 320
+      "line_search_forward_examples": 320,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.2556981978759099,
+        "chosen_priced_score": 0.2556981978759099,
+        "priced_gap": 0.0,
+        "tolerance": 2.566981978759099e-13
+      }
     },
     {
       "step": 297,
@@ -4327,7 +6416,14 @@
       "price": 0.0011339685073168914,
       "update_batch_loss": 0.49026404655834455,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 384
+      "line_search_forward_examples": 384,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.7664488806268145,
+        "chosen_priced_score": 0.7664488806268145,
+        "priced_gap": 0.0,
+        "tolerance": 7.674488806268145e-13
+      }
     },
     {
       "step": 298,
@@ -4341,7 +6437,14 @@
       "price": 0.0005138330093374292,
       "update_batch_loss": 0.5638459246252773,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.16971948407131104,
+        "chosen_priced_score": 0.16971948407131104,
+        "priced_gap": 0.0,
+        "tolerance": 1.7071948407131103e-13
+      }
     },
     {
       "step": 299,
@@ -4355,7 +6458,14 @@
       "price": 0.0036438153738056387,
       "update_batch_loss": 0.5250382421793003,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 192
+      "line_search_forward_examples": 192,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.4283639383255182,
+        "chosen_priced_score": 1.4283639383255182,
+        "priced_gap": 0.0,
+        "tolerance": 1.4293639383255183e-12
+      }
     },
     {
       "step": 300,
@@ -4369,7 +6479,14 @@
       "price": 0.001599901368716981,
       "update_batch_loss": 0.5356558820153645,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 256
+      "line_search_forward_examples": 256,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 0.33702687918499036,
+        "chosen_priced_score": 0.33702687918499036,
+        "priced_gap": 0.0,
+        "tolerance": 3.3802687918499034e-13
+      }
     },
     {
       "step": 301,
@@ -4383,7 +6500,14 @@
       "price": 0.001666756334270322,
       "update_batch_loss": 0.5272906771573216,
       "line_search_status": "bracketed",
-      "line_search_forward_examples": 576
+      "line_search_forward_examples": 576,
+      "selection": {
+        "near_tie_count": 1,
+        "best_priced_score": 1.2868651020223008,
+        "chosen_priced_score": 1.2868651020223008,
+        "priced_gap": 0.0,
+        "tolerance": 1.2878651020223007e-12
+      }
     }
   ]
 }

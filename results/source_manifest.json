@@ -1,11 +1,12 @@
 {
   "src/joint_control/__init__.py": "4e060ffa0a90434af641aafc445a9f03e5e00a1a12eb7db55ad36483a599a47e",
-  "src/joint_control/controller.py": "4aa09a4ab4336ee53325ba15cbc1a117e2dfa8721d987cef25c4f20ad45dc9be",
+  "src/joint_control/controller.py": "ff899ba5f13cef7876767947f9bcbbd1578b2c27aa8b4d58ebfa169d332e0807",
   "src/joint_control/data.py": "8a1a1ec9fa3460052f6b51d43ba73524e7c377b864460122ed7b59225305b799",
+  "src/joint_control/diagnostics.py": "4f61ce74082b9b5a16a0bd6ecd0bcdb9c09b676acac6b29047e8457af2c7eedc",
   "src/joint_control/io.py": "9b8b6275de3135215dfe172fce52b47b2f082399e18e0dc8e029a4682900c5c6",
   "src/joint_control/model.py": "2b9ba0ac9d5f8838bb9f3dfa4aefc2028f4a040e2cc40f49a035208a02a2e1de",
-  "src/joint_control/neural.py": "68ca8daab261405ff1b7bf03a793adfff115ad3d94231eab04d1bc5da5029d52",
+  "src/joint_control/neural.py": "2b4d462778e48133699f1ca550efb9727b4e956531cf4e513d84cfdc8926094f",
   "src/joint_control/synthetic.py": "30649c0855da8a89145126c36dc2a592a59a967dc9b7c2f008c6ba4c89fcf109",
   "scripts/run.py": "6d244ce09efeb0b714b74c386249ce875735f44ef6bab6ec4663ae8dff50bfca",
-  "configs/midterm.json": "aa6f3dcab2900ea603ddae4a88c5ee5fa7b32081bbb9eba1f25c395c71dd4fa5"
+  "configs/midterm.json": "9c48c54301497103e0f76b22850c51d24a909a99f7117ce7cf45e07f8f654f67"
 }

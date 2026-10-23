@@ -1,0 +1,83 @@
+{
+  "commit": "6836c47f346c182fa236f7069e608ffec79a2dde",
+  "frequencies": {
+    "total_steps": 894,
+    "controller_decisions": 894,
+    "tail_steps": 0,
+    "batch": {
+      "32": {
+        "count": 34,
+        "percent": 3.8031319910514543
+      },
+      "64": {
+        "count": 831,
+        "percent": 92.95302013422818
+      },
+      "128": {
+        "count": 29,
+        "percent": 3.243847874720358
+      }
+    },
+    "beta": {
+      "0.0": {
+        "count": 774,
+        "percent": 86.57718120805369
+      },
+      "0.5": {
+        "count": 117,
+        "percent": 13.087248322147651
+      },
+      "0.9": {
+        "count": 3,
+        "percent": 0.33557046979865773
+      }
+    },
+    "phases": [
+      {
+        "budget_fraction": [
+          0.0,
+          0.25
+        ],
+        "steps": 217,
+        "batch_64_percent": 89.40092165898618,
+        "beta_zero_percent": 87.55760368663594,
+        "mean_eta": 0.0391030025921659
+      },
+      {
+        "budget_fraction": [
+          0.25,
+          0.5
+        ],
+        "steps": 227,
+        "batch_64_percent": 91.62995594713657,
+        "beta_zero_percent": 87.66519823788546,
+        "mean_eta": 0.020066315907213656
+      },
+      {
+        "budget_fraction": [
+          0.5,
+          0.75
+        ],
+        "steps": 224,
+        "batch_64_percent": 95.08928571428571,
+        "beta_zero_percent": 87.5,
+        "mean_eta": 0.016893659319196428
+      },
+      {
+        "budget_fraction": [
+          0.75,
+          1.0
+        ],
+        "steps": 226,
+        "batch_64_percent": 95.57522123893806,
+        "beta_zero_percent": 83.6283185840708,
+        "mean_eta": 0.014932548050331859
+      }
+    ]
+  },
+  "first_beta": {
+    "0": 0.9,
+    "1": 0.0,
+    "2": 0.9
+  }
+}

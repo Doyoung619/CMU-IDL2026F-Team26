@@ -18,8 +18,10 @@
    Added a training-only development stability screen (max <= 10*initial),
    retained every tuning trial and the rejection flag, reran all final runs,
    and regenerated figures. No final evaluation seed was used for that screen.
-6. Neural controller performance is worse than tuned SGDM, and the pilot-32
-   configuration is highly variable. These negative results are retained.
+6. Initial neural control underperformed SGDM and showed large Pilot-32 spread.
+   The 2026-10-23 feedback revision identifies the residual-rate artifact behind
+   specific collapses and replaces the pilot-size-only interpretation. Original
+   results remain available at commit 6836c47f346c182fa236f7069e608ffec79a2dde.
 7. Original Proposal.tex has a pre-existing natbib author-year/numeric bibitem
    mismatch. Do not modify the original file. New report explicitly sets numeric
    natbib mode, reuses the same article/final NeurIPS style, and compiles.
@@ -39,3 +41,21 @@
 The delivered `results/` contains the final executed protocol. Earlier diagnostic
 outputs in `results/oracle_revision/` are excluded from delivery to avoid mixing
 protocols. All retained final metrics are produced by the documented run command.
+
+## 2026-10-23 feedback revision
+
+Moved the complete checkout to `IDL_Project/Experiment`, and the independent
+Overleaf checkout to `IDL_Project/Overleaf`. Both retained history/data and their
+respective origin. Updated export/build documentation for sibling directories.
+
+Implemented a last-accepted-rate cap on residual updates and a scale-aware
+near-tie policy with deterministic lexicographic choice. Added tests and ran the
+complete suite, then nine extra replays to cross tie rule and tail policy.
+First-step beta is now 0 for every final Pilot-64 seed; legacy rounding selected
+0.9 at seeds 0/2. Added full-training audits without feeding them into decisions.
+During QA, separated audit gradient cost from the optimization-budget position
+in log fields, reran the full protocol, and validated 576,000 diagnostic gradient
+examples. Twelve tests pass, including audit accounting/noninterference and the
+last-accepted-rate behavior after a skipped step. Report red text is replaced
+with measured evidence and a qualified interpretation. Full details are in
+`FEEDBACK_REVISION.md`.
